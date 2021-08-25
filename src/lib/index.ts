@@ -1,4 +1,5 @@
 import mqtt from 'async-mqtt';
+import 'intl';
 import Config from './config';
 import Cache from './cache';
 import {MqttClient} from 'mqtt/types/lib/client';

@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "async-mqtt": "^2.6.1",
+    "intl": "^1.2.5",
     "node-ical": "^0.13.0",
     "vestaboard-api": "^1.0.3"
   },
