@@ -56,9 +56,18 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
             }))
             .filter(entry =>
                 entry.end > new Date() &&
-                entry.start.toJSON().substr(0, 10) === new Date().toJSON().substr(0, 10) &&
-                entry.start.getDate() === new Date().getDate()
+                CalendarPage.isSameDay(entry.start, entry.end)
             );
+    }
+
+    public static isSameDay (a: Date, b: Date): boolean {
+        const h1 = a.getHours() - a.getTimezoneOffset() / 60;
+        const h2 = b.getHours() - b.getTimezoneOffset() / 60;
+
+        const dateA = a.getDate() + (h1 >= 24? 1: 0);
+        const dateB = b.getDate() + (h2 >= 24? 1: 0);
+
+        return dateA === dateB;
     }
 
     public async fetchURLs(urls: string[]): Promise<CalendarPageItem[]> {
