@@ -70,9 +70,22 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
         return mergedResult;
     }
 
-    public static getTimeStr (date: Date): string {
-        return date.getHours().toString().padStart(2, '⬛️') + ':' +
-            date.getMinutes().toString().padStart(2, '0');
+    public static getTimeStr (event: CalendarPageItem): string {
+        if(
+            !event.start.getHours() &&
+            !event.start.getMinutes() &&
+            !event.start.getSeconds() &&
+            !event.start.getMilliseconds() &&
+            !event.end.getHours() &&
+            !event.end.getMinutes() &&
+            !event.end.getSeconds() &&
+            !event.end.getMilliseconds()
+        ) {
+            return 'Heute';
+        }
+
+        return event.start.getHours().toString().padStart(2, '⬛️') + ':' +
+            event.start.getMinutes().toString().padStart(2, '0');
     }
 
     public async render (payload: CalendarPagePayload): Promise<PageRenderResponse> {
@@ -95,7 +108,7 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
 
         let validTill = new Date(new Date().getTime() + 1000 * 60 * 10);
         calendar.forEach(event => {
-            message.write(CalendarPage.getTimeStr(event.start), {line: MessageWriteOptionsLine.NEXT});
+            message.write(CalendarPage.getTimeStr(event), {line: MessageWriteOptionsLine.NEXT});
             message.write(event.summary, {line: MessageWriteOptionsLine.CURRENT, row: 6});
 
             message.write('', {line: MessageWriteOptionsLine.NEXT});
