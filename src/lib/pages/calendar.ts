@@ -55,8 +55,7 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
                 summary: String(entry.summary)
             }))
             .filter(entry =>
-                entry.end > new Date() &&
-                CalendarPage.isSameDay(entry.start, entry.end)
+                entry.end > new Date()
             );
     }
 
@@ -68,6 +67,15 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
         const dateB = b.getDate() + (h2 >= 24? 1: 0);
 
         return dateA === dateB;
+    }
+
+    public static isMidnight (date: Date) {
+        return Boolean(
+            !date.getHours() &&
+            !date.getMinutes() &&
+            !date.getSeconds() &&
+            !date.getMilliseconds()
+        );
     }
 
     public async fetchURLs(urls: string[]): Promise<CalendarPageItem[]> {
@@ -82,16 +90,18 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
 
     public static getTimeStr (event: CalendarPageItem): string {
         if(
-            !event.start.getHours() &&
-            !event.start.getMinutes() &&
-            !event.start.getSeconds() &&
-            !event.start.getMilliseconds() &&
-            !event.end.getHours() &&
-            !event.end.getMinutes() &&
-            !event.end.getSeconds() &&
-            !event.end.getMilliseconds()
+            this.isMidnight(event.start) &&
+            this.isMidnight(event.end) &&
+            this.isSameDay(new Date(), event.start)
         ) {
             return 'Heute';
+        }
+        if(
+            this.isMidnight(event.start) &&
+            this.isMidnight(event.end) &&
+            this.isSameDay(new Date(new Date().getTime() + 1000 * 60 * 60 * 24), event.start)
+        ) {
+            return 'Morgn';
         }
 
         return event.start.getHours().toString().padStart(2, '⬛️') + ':' +
