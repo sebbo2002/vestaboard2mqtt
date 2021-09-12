@@ -56,7 +56,8 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
             }))
             .filter(entry =>
                 entry.end > new Date() &&
-                entry.start.toJSON().substr(0, 10) === new Date().toJSON().substr(0, 10)
+                entry.start.toJSON().substr(0, 10) === new Date().toJSON().substr(0, 10) &&
+                entry.start.getDate() === new Date().getDate()
             );
     }
 
