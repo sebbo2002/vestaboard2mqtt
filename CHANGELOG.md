@@ -1,3 +1,10 @@
+# [1.0.0-develop.2](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.0-develop.1...v1.0.0-develop.2) (2021-10-10)
+
+
+### Bug Fixes
+
+* Also fill last column if word is too long to write ([2ac42f8](https://github.com/sebbo2002/vestaboard2mqtt/commit/2ac42f8238df0eb893c055d55483005e6504319f))
+
 # 1.0.0 (2021-09-20)
 
 # 1.0.0-develop.1 (2021-10-04)
