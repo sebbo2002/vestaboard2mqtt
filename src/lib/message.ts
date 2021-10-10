@@ -96,9 +96,16 @@ export default class Message {
                 pointer[0]++;
             }
 
-            let charsLeftInLine = status.lastRow - pointer[0];
+            let charsLeftInLine = status.lastRow - pointer[0] + 1;
             const chars = Message.word2chars(word);
-            // console.log('write()', 'chars =', chars, 'left =', charsLeftInLine, `(${status.lastRow} - ${pointer[0]})`, 'pointer =', pointer);
+            // console.log(
+            //     'write()',
+            //     'chars =', chars,
+            //     'left =', charsLeftInLine,
+            //     `(${status.lastRow} - ${pointer[0]})`,
+            //     'pointer =', pointer,
+            //     'charsLeftInLine =', charsLeftInLine
+            // );
 
             // Unsupported Word / emoji?
             if(chars.filter(c => c === 60).length === chars.length && chars.length > 0) {
