@@ -64,7 +64,7 @@ describe('Message', function () {
 
             assert.strictEqual(msg.toString(),
                 '#==============================================#\n' +
-                '# L O R E M - I P S U M - D O L O R - S I T    #\n' +
+                '# L O R E M - I P S U M - D O L O R - S I T -  #\n' +
                 '#                                              #\n' +
                 '#                                              #\n' +
                 '#                                              #\n' +
