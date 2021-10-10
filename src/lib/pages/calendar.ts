@@ -116,7 +116,7 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
 
         const calendar = await this.fetchURLs(urls)
             .then(calendar => calendar.filter(entry =>
-                entry.start < new Date(new Date().getTime() + (1000 * 60 * 60 * 18))
+                entry.start < new Date(new Date().getTime() + (1000 * 60 * 60 * 12))
             ));
 
         if(!calendar.length) {
