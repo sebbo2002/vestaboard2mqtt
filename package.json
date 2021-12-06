@@ -1,5 +1,5 @@
 {
-  "author": "Sebastian Pekarek <niucejaeweetholeechu@e.sebbo.net>",
+  "author": "Sebastian Pekarek <mail@sebbo.net>",
   "bin": {
     "vestaboard2mqtt": "./dist/bin/start.js"
   },
