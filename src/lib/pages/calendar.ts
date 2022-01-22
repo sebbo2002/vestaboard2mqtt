@@ -69,7 +69,7 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
         return dateA === dateB;
     }
 
-    public static isMidnight (date: Date) {
+    public static isMidnight (date: Date): boolean {
         return Boolean(
             !date.getHours() &&
             !date.getMinutes() &&
@@ -80,12 +80,10 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
 
     public async fetchURLs(urls: string[]): Promise<CalendarPageItem[]> {
         const rawResult: {start: Date, end: Date, summary: string}[][] = await Promise.all(urls.map(url => this.fetchURL(url)));
-        const mergedResult = ([] as CalendarPageItem[])
+        return ([] as CalendarPageItem[])
             .concat(...rawResult)
             .filter(entry => entry.end > new Date())
             .sort((a, b) => a.end.getTime() - b.end.getTime());
-
-        return mergedResult;
     }
 
     public static getTimeStr (event: CalendarPageItem): string {
