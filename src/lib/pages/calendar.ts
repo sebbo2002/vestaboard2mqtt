@@ -115,9 +115,14 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
             .filter(Boolean);
 
         const calendar = await this.fetchURLs(urls)
-            .then(calendar => calendar.filter(entry =>
-                entry.start < new Date(new Date().getTime() + (1000 * 60 * 60 * 12))
-            ));
+            .then(calendar => calendar.filter(entry => {
+                if (CalendarPage.isMidnight(entry.start) && CalendarPage.isMidnight(entry.end)) {
+                    return CalendarPage.isSameDay(new Date(), entry.start) ||
+                        CalendarPage.isSameDay(new Date(), entry.end);
+                } else {
+                    return entry.start < new Date(new Date().getTime() + (1000 * 60 * 60 * 12));
+                }
+            }));
 
         if(!calendar.length) {
             const today = new TodayPage();
