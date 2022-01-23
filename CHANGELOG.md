@@ -1,3 +1,10 @@
+# [1.0.0-develop.4](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.0-develop.3...v1.0.0-develop.4) (2022-01-23)
+
+
+### Features
+
+* **Calendar:** Show all day events only on same day and the day before ([a77529c](https://github.com/sebbo2002/vestaboard2mqtt/commit/a77529c97d94b930e90e64bcbbd7a1a7fe60d156))
+
 # [1.0.0-develop.3](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.0-develop.2...v1.0.0-develop.3) (2021-12-05)
 
 
