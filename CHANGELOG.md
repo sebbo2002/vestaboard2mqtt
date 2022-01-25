@@ -1,3 +1,10 @@
+# [1.0.0-develop.5](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.0-develop.4...v1.0.0-develop.5) (2022-01-25)
+
+
+### Features
+
+* Add more emojis replaced with supported characters ([7290b3e](https://github.com/sebbo2002/vestaboard2mqtt/commit/7290b3e7a0a7fb0cc64e6eb0630219288a3c9366))
+
 # [1.0.0-develop.4](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.0-develop.3...v1.0.0-develop.4) (2022-01-23)
 
 
