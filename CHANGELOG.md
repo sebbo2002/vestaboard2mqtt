@@ -1,3 +1,24 @@
+# [1.0.0-develop.5](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.0-develop.4...v1.0.0-develop.5) (2022-01-25)
+
+
+### Features
+
+* Add more emojis replaced with supported characters ([7290b3e](https://github.com/sebbo2002/vestaboard2mqtt/commit/7290b3e7a0a7fb0cc64e6eb0630219288a3c9366))
+
+# [1.0.0-develop.4](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.0-develop.3...v1.0.0-develop.4) (2022-01-23)
+
+
+### Features
+
+* **Calendar:** Show all day events only on same day and the day before ([a77529c](https://github.com/sebbo2002/vestaboard2mqtt/commit/a77529c97d94b930e90e64bcbbd7a1a7fe60d156))
+
+# [1.0.0-develop.3](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.0-develop.2...v1.0.0-develop.3) (2021-12-05)
+
+
+### Bug Fixes
+
+* **CI:** Fix DockerHub container release ([01b7534](https://github.com/sebbo2002/vestaboard2mqtt/commit/01b753406d1f1ef24a949c7d7b946d99b779d013))
+
 # [1.0.0-develop.2](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.0-develop.1...v1.0.0-develop.2) (2021-10-10)
 
 
