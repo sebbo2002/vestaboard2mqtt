@@ -1,0 +1,47 @@
+<!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>@sebbo2002/vestaboard2mqtt - v1.0.0</title><meta name="description" content="Documentation for @sebbo2002/vestaboard2mqtt - v1.0.0"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">@sebbo2002/vestaboard2mqtt - v1.0.0</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>@sebbo2002/vestaboard2mqtt - v1.0.0</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#vestaboard2mqtt" id="vestaboard2mqtt" style="color: inherit; text-decoration: none;">
+  <h1>vestaboard2mqtt</h1>
+</a>
+<p><a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License"></a></p>
+<p>Small script to connect a Vestaboard with my home automation via MQTT.
+Can display messages, the current day or a calendar.</p>
+
+<a href="#📦-installation" id="📦-installation" style="color: inherit; text-decoration: none;">
+  <h2>📦 Installation</h2>
+</a>
+<pre><code><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-0">install</span><span class="hl-1"> -</span><span class="hl-0">g</span><span class="hl-1"> @</span><span class="hl-0">sebbo2002</span><span class="hl-1">/</span><span class="hl-0">vestaboard2mqtt</span>
+</code></pre>
+<p>Configuration is expected in the file &quot;~/.vestaboard2mqtt&quot;. An example file is in the root folder.
+Please stop the script before editing.</p>
+
+<a href="#📑-pages" id="📑-pages" style="color: inherit; text-decoration: none;">
+  <h2>📑 Pages</h2>
+</a>
+
+<a href="#simple-message" id="simple-message" style="color: inherit; text-decoration: none;">
+  <h3>Simple Message</h3>
+</a>
+<p>Displays a message on the board. To do this, send the content of the message to <code>:prefix/message</code>.</p>
+
+<a href="#today" id="today" style="color: inherit; text-decoration: none;">
+  <h3>Today</h3>
+</a>
+<p>Displays today&#39;s day of the week and the date. Can optionally be extended with the temperature and
+the probability of rain.</p>
+<p>Activated with a message to <code>:prefix/today</code>. The weather data can either be sent as JSON
+(<code>{&quot;temp&quot;: [16, 28], &quot;precip&quot;: 5}</code>) or set individually (e.g. <code>:prefix/today/min-temp</code> or
+<code>:prefix/today/precip</code>).</p>
+
+<a href="#calendar" id="calendar" style="color: inherit; text-decoration: none;">
+  <h3>Calendar</h3>
+</a>
+<p>Displays the next entries for one or more selected calendars. Calendars are set in the file
+beforehand. The calendar is activated with <code>:prefix/calendar</code>, specifying the list of
+calendars to be viewed, comma-separated.</p>
+<p>If there are no entries for the current day, the display of Today (see above) is output.</p>
+
+<a href="#🙆🏼♂️-copyright-and-license" id="🙆🏼♂️-copyright-and-license" style="color: inherit; text-decoration: none;">
+  <h2>🙆🏼‍♂️ Copyright and license</h2>
+</a>
+<p>Copyright (c) Sebastian Pekarek under the <a href="LICENSE">MIT license</a>.</p>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-class"><a href="classes/default.html" class="tsd-kind-icon">default</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
