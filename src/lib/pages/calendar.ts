@@ -1,7 +1,7 @@
 import Cache from '../cache';
 import Page, {PageRenderResponse} from '../page';
 import Message, {MessageWriteOptionsLine} from '../message';
-import ical from 'node-ical';
+import ical, { VEvent } from 'node-ical';
 import Config from '../config';
 import TodayPage, {TodayPagePayload} from './today';
 
@@ -29,13 +29,14 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
         let preCached = await CalendarPage.cache.get<CalendarPageItem[]>(url, 1000 * 60 * 10);
         if(!preCached) {
             const calendar = await ical.async.fromURL(url);
-            preCached = Object.values(calendar)
+            const events = Object.values(calendar)
                 .filter(entry =>
                     entry.type === 'VEVENT' &&
                     entry.start &&
                     entry.end &&
                     entry.summary
-                )
+                ) as VEvent[];
+            preCached = events
                 .map(entry => ({
                     start: new Date(String(entry.start)),
                     end: new Date(String(entry.end)),
@@ -60,13 +61,11 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
     }
 
     public static isSameDay (a: Date, b: Date): boolean {
-        const h1 = a.getHours() - a.getTimezoneOffset() / 60;
-        const h2 = b.getHours() - b.getTimezoneOffset() / 60;
-
-        const dateA = a.getDate() + (h1 >= 24? 1: 0);
-        const dateB = b.getDate() + (h2 >= 24? 1: 0);
-
-        return dateA === dateB;
+        return (
+            a.getUTCFullYear() === b.getUTCFullYear() &&
+            a.getUTCMonth() === b.getUTCMonth() &&
+            a.getUTCDate() === b.getUTCDate()
+        );
     }
 
     public static isMidnight (date: Date): boolean {
