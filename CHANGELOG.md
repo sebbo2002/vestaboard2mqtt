@@ -1,3 +1,5 @@
+## [1.0.2-develop.2](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.2-develop.1...v1.0.2-develop.2) (2022-04-25)
+
 ## [1.0.2-develop.1](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.1...v1.0.2-develop.1) (2022-04-11)
 
 ## [1.0.1](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.0...v1.0.1) (2022-03-31)
