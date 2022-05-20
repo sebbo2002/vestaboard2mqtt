@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="270" lines-covered="150" line-rate="0.5556" branches-valid="232" branches-covered="97" branch-rate="0.4181" timestamp="1648744920829" complexity="0" version="0.1">
+<coverage lines-valid="270" lines-covered="150" line-rate="0.5556" branches-valid="232" branches-covered="97" branch-rate="0.4181" timestamp="1653062412862" complexity="0" version="0.1">
   <sources>
     <source>/home/runner/work/vestaboard2mqtt/vestaboard2mqtt</source>
   </sources>
@@ -233,9 +233,9 @@
                 <line number="189" hits="257"/>
               </lines>
             </method>
-            <method name="(anonymous_8)" hits="8574" signature="()V">
+            <method name="(anonymous_8)" hits="8709" signature="()V">
               <lines>
-                <line number="191" hits="8574"/>
+                <line number="191" hits="8709"/>
               </lines>
             </method>
             <method name="(anonymous_9)" hits="278" signature="()V">
@@ -363,9 +363,9 @@
                 <line number="275" hits="1452"/>
               </lines>
             </method>
-            <method name="(anonymous_34)" hits="133584" signature="()V">
+            <method name="(anonymous_34)" hits="146652" signature="()V">
               <lines>
-                <line number="277" hits="133584"/>
+                <line number="277" hits="146652"/>
               </lines>
             </method>
             <method name="(anonymous_35)" hits="23539" signature="()V">
@@ -433,7 +433,7 @@
             <line number="183" hits="256" branch="false"/>
             <line number="186" hits="49" branch="false"/>
             <line number="190" hits="257" branch="false"/>
-            <line number="191" hits="8574" branch="false"/>
+            <line number="191" hits="8709" branch="false"/>
             <line number="192" hits="257" branch="true" condition-coverage="100% (2/2)"/>
             <line number="193" hits="242" branch="false"/>
             <line number="196" hits="15" branch="false"/>
@@ -470,7 +470,7 @@
             <line number="268" hits="11" branch="false"/>
             <line number="270" hits="1452" branch="false"/>
             <line number="276" hits="1452" branch="false"/>
-            <line number="277" hits="133584" branch="false"/>
+            <line number="277" hits="146652" branch="false"/>
             <line number="278" hits="23539" branch="false"/>
             <line number="280" hits="1452" branch="true" condition-coverage="100% (2/2)"/>
             <line number="281" hits="1422" branch="false"/>
