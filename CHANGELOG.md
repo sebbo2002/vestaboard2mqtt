@@ -1,3 +1,10 @@
+## [1.0.2-develop.6](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.2-develop.5...v1.0.2-develop.6) (2022-05-20)
+
+
+### Reverts
+
+* Revert "ci: Remove GH_TOKEN and use GITHUB_TOKEN" ([b5c2eb6](https://github.com/sebbo2002/vestaboard2mqtt/commit/b5c2eb66170b38bda1e49ad5bb5cf02bd13eb8e4))
+
 ## [1.0.2-develop.5](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.2-develop.4...v1.0.2-develop.5) (2022-05-16)
 
 ## [1.0.2-develop.4](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.2-develop.3...v1.0.2-develop.4) (2022-05-02)
