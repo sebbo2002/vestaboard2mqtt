@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.1...v1.0.2) (2022-05-20)
+
+
+### Reverts
+
+* Revert "ci: Remove docker setup" ([655068b](https://github.com/sebbo2002/vestaboard2mqtt/commit/655068b3b9c6139181ae87421db5f8144fae3e18))
+
 ## [1.0.2-develop.6](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.2-develop.5...v1.0.2-develop.6) (2022-05-20)
 
 
