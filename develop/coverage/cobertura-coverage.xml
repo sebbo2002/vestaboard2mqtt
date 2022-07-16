@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="270" lines-covered="150" line-rate="0.5556" branches-valid="232" branches-covered="97" branch-rate="0.4181" timestamp="1655928106750" complexity="0" version="0.1">
+<coverage lines-valid="270" lines-covered="150" line-rate="0.5556" branches-valid="232" branches-covered="97" branch-rate="0.4181" timestamp="1657993804173" complexity="0" version="0.1">
   <sources>
     <source>/home/runner/work/vestaboard2mqtt/vestaboard2mqtt</source>
   </sources>
@@ -23,9 +23,9 @@
         </class>
       </classes>
     </package>
-    <package name="lib.file:.home.runner.work.vestaboard2mqtt.vestaboard2mqtt.src.lib" line-rate="0.7977" branch-rate="0.6065">
+    <package name="lib" line-rate="0.7977" branch-rate="0.6065">
       <classes>
-        <class name="cache.ts" filename="src/lib/file:/home/runner/work/vestaboard2mqtt/vestaboard2mqtt/src/lib/cache.ts" line-rate="0.8043" branch-rate="0.7143">
+        <class name="cache.ts" filename="src/lib/cache.ts" line-rate="0.8043" branch-rate="0.7143">
           <methods>
             <method name="(anonymous_7)" hits="4" signature="()V">
               <lines>
@@ -127,7 +127,7 @@
             <line number="119" hits="2" branch="false"/>
           </lines>
         </class>
-        <class name="config.ts" filename="src/lib/file:/home/runner/work/vestaboard2mqtt/vestaboard2mqtt/src/lib/config.ts" line-rate="0.1304" branch-rate="0">
+        <class name="config.ts" filename="src/lib/config.ts" line-rate="0.1304" branch-rate="0">
           <methods>
             <method name="(anonymous_8)" hits="0" signature="()V">
               <lines>
@@ -191,7 +191,7 @@
             <line number="78" hits="0" branch="false"/>
           </lines>
         </class>
-        <class name="message.ts" filename="src/lib/file:/home/runner/work/vestaboard2mqtt/vestaboard2mqtt/src/lib/message.ts" line-rate="0.9423" branch-rate="0.8734000000000001">
+        <class name="message.ts" filename="src/lib/message.ts" line-rate="0.9423" branch-rate="0.8734000000000001">
           <methods>
             <method name="(anonymous_0)" hits="1" signature="()V">
               <lines>
@@ -488,9 +488,9 @@
         </class>
       </classes>
     </package>
-    <package name="lib.pages.file:.home.runner.work.vestaboard2mqtt.vestaboard2mqtt.src.lib.pages" line-rate="0.1277" branch-rate="0.039">
+    <package name="lib.pages" line-rate="0.1277" branch-rate="0.039">
       <classes>
-        <class name="calendar.ts" filename="src/lib/pages/file:/home/runner/work/vestaboard2mqtt/vestaboard2mqtt/src/lib/pages/calendar.ts" line-rate="0.14550000000000002" branch-rate="0.08109999999999999">
+        <class name="calendar.ts" filename="src/lib/pages/calendar.ts" line-rate="0.14550000000000002" branch-rate="0.08109999999999999">
           <methods>
             <method name="(anonymous_14)" hits="0" signature="()V">
               <lines>
@@ -656,7 +656,7 @@
             <line number="144" hits="0" branch="false"/>
           </lines>
         </class>
-        <class name="today.ts" filename="src/lib/pages/file:/home/runner/work/vestaboard2mqtt/vestaboard2mqtt/src/lib/pages/today.ts" line-rate="0.1026" branch-rate="0">
+        <class name="today.ts" filename="src/lib/pages/today.ts" line-rate="0.1026" branch-rate="0">
           <methods>
             <method name="(anonymous_14)" hits="0" signature="()V">
               <lines>
