@@ -1,7 +1,7 @@
-import Page from '../page';
-import MessagePage from './message';
-import CalendarPage from './calendar';
-import TodayPage from './today';
+import Page from '../page.js';
+import MessagePage from './message.js';
+import CalendarPage from './calendar.js';
+import TodayPage from './today.js';
 
 const pages: Record<string, Page<unknown, unknown>> = {
     message: new MessagePage(),

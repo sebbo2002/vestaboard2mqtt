@@ -1,4 +1,4 @@
-import Cache from './cache';
+import Cache from './cache.js';
 
 export interface ConfigBoardData {
     id: string;

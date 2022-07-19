@@ -1,8 +1,8 @@
 'use strict';
 
-import Message, {MessageWriteOptionsLine} from '../../src/lib/message';
-import {BoardCharArray} from 'vestaboard-api/lib/cjs/values';
-import assert = require('assert');
+import Message, {MessageWriteOptionsLine} from '../../src/lib/message.js';
+import type {BoardCharArray} from 'vestaboard-api/lib/cjs/values.js';
+import * as assert from 'assert';
 
 describe('Message', function () {
     describe('write()', function () {

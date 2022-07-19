@@ -1,6 +1,6 @@
-import Cache from '../cache';
-import Page, {PageRenderResponse} from '../page';
-import Message, {MessageWriteOptionsLine} from '../message';
+import Cache from '../cache.js';
+import Page, {PageRenderResponse} from '../page.js';
+import Message, {MessageWriteOptionsLine} from '../message.js';
 
 
 export default class MessagePage implements Page<string> {

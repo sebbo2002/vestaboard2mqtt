@@ -1,16 +1,13 @@
 name: Test & Release
 on:
-  push:
-    branches:
-      - develop
-      - main
+  push: null
   pull_request: null
 
 jobs:
   tests:
     name: Unit Tests
     runs-on: ubuntu-latest
-    if: contains(toJson(github.event.commits.*.message), '[skip ci]') == false || github.ref == 'refs/heads/main'
+    if: github.repository != 'sebbo2002/js-template' && (contains(toJson(github.event.commits.*.message), '[skip ci]') == false || github.ref == 'refs/heads/main')
     strategy:
       matrix:
         node: [14.x, 16.x, 18.x]
@@ -30,7 +27,7 @@ jobs:
   coverage:
     name: Code Coverage / Lint
     runs-on: ubuntu-latest
-    if: contains(toJson(github.event.commits.*.message), '[skip ci]') == false || github.ref == 'refs/heads/main'
+    if: github.repository != 'sebbo2002/js-template' && (contains(toJson(github.event.commits.*.message), '[skip ci]') == false || github.ref == 'refs/heads/main')
     steps:
       - name: ☁️ Checkout Project
         uses: actions/checkout@v3

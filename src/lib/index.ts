@@ -1,10 +1,10 @@
 import mqtt from 'async-mqtt';
-import Config from './config';
-import Cache from './cache';
+import Config from './config.js';
+import Cache from './cache.js';
 import {MqttClient} from 'mqtt/types/lib/client';
-import Message from './message';
-import pages from './pages';
-import Page from './page';
+import Message from './message.js';
+import pages from './pages/index.js';
+import Page from './page.js';
 import { Vesta } from 'vestaboard-api';
 
 export default class Vestaboard2MQTT {
