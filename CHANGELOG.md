@@ -1,3 +1,15 @@
+# [2.0.0-develop.1](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.3-develop.3...v2.0.0-develop.1) (2022-07-25)
+
+
+### Build System
+
+* Native ESM support ([7b86a4f](https://github.com/sebbo2002/vestaboard2mqtt/commit/7b86a4f1187c387a3a5792e1fb72d822b04e3631))
+
+
+### BREAKING CHANGES
+
+* Only Support for node.js ^12.20.0 || >=14.13.1
+
 # [2.0.0-develop.1](https://github.com/sebbo2002/vestaboard2mqtt/compare/v1.0.3-develop.3...v2.0.0-develop.1) (2022-07-19)
 
 
