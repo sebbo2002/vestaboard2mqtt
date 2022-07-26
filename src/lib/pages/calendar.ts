@@ -115,7 +115,7 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
             .then(calendar => calendar.filter(entry => {
                 if (CalendarPage.isMidnight(entry.start) && CalendarPage.isMidnight(entry.end)) {
                     return CalendarPage.isSameDay(new Date(), entry.start) ||
-                        CalendarPage.isSameDay(new Date(), entry.end);
+                        CalendarPage.isSameDay(new Date(new Date().getTime() + 1000 * 60 * 60 * 24), entry.start);
                 } else {
                     return entry.start < new Date(new Date().getTime() + (1000 * 60 * 60 * 12));
                 }
