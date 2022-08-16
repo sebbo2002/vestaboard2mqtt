@@ -61,20 +61,26 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
     }
 
     public static isSameDay (a: Date, b: Date): boolean {
-        return (
+        const result = Boolean(
             a.getUTCFullYear() === b.getUTCFullYear() &&
             a.getUTCMonth() === b.getUTCMonth() &&
             a.getUTCDate() === b.getUTCDate()
         );
+
+        console.log(`isSameDay(${a}, ${b}) => ${result}`);
+        return result;
     }
 
     public static isMidnight (date: Date): boolean {
-        return Boolean(
+        const result = Boolean(
             !date.getHours() &&
             !date.getMinutes() &&
             !date.getSeconds() &&
             !date.getMilliseconds()
         );
+
+        console.log(`isMidnight(${date}) => ${result}`);
+        return result;
     }
 
     public async fetchURLs(urls: string[]): Promise<CalendarPageItem[]> {
@@ -115,7 +121,7 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
             .then(calendar => calendar.filter(entry => {
                 if (CalendarPage.isMidnight(entry.start) && CalendarPage.isMidnight(entry.end)) {
                     return CalendarPage.isSameDay(new Date(), entry.start) ||
-                        CalendarPage.isSameDay(new Date(), entry.end);
+                        CalendarPage.isSameDay(new Date(new Date().getTime() + 1000 * 60 * 60 * 24), entry.start);
                 } else {
                     return entry.start < new Date(new Date().getTime() + (1000 * 60 * 60 * 12));
                 }
