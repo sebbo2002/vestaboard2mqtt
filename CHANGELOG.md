@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/sebbo2002/vestaboard2mqtt/compare/v2.0.0...v2.0.1) (2022-08-16)
+
+
+### Bug Fixes
+
+* **Calendar:** Show all-day events only one day in advance ([ae4121b](https://github.com/sebbo2002/vestaboard2mqtt/commit/ae4121bc3e59e8b99d934dbf65e73fba29bc7786))
+
 ## [2.0.1-develop.2](https://github.com/sebbo2002/vestaboard2mqtt/compare/v2.0.1-develop.1...v2.0.1-develop.2) (2022-08-16)
 
 ## [2.0.1-develop.1](https://github.com/sebbo2002/vestaboard2mqtt/compare/v2.0.0...v2.0.1-develop.1) (2022-07-26)
