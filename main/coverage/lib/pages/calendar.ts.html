@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">26.17% </span>
+                <span class="strong">27.09% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>39/149</span>
+                <span class='fraction'>42/155</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">26.17% </span>
+                <span class="strong">27.09% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>39/149</span>
+                <span class='fraction'>42/155</span>
             </div>
         
             
@@ -212,7 +212,13 @@
 <a name='L147'></a><a href='#L147'>147</a>
 <a name='L148'></a><a href='#L148'>148</a>
 <a name='L149'></a><a href='#L149'>149</a>
-<a name='L150'></a><a href='#L150'>150</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -281,8 +287,14 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -424,20 +436,26 @@ export default class CalendarPage implements Page&lt;CalendarPagePayload&gt; {
 <span class="cstat-no" title="statement not covered" >    }</span>
 &nbsp;
     public static isSameDay (a: Date, b: Date): boolean {
-        return (
+        const result = Boolean(
             a.getUTCFullYear() === b.getUTCFullYear() &amp;&amp;
             a.getUTCMonth() === b.getUTCMonth() &amp;&amp;
             a.getUTCDate() === b.getUTCDate()
         );
+&nbsp;
+        console.log(`isSameDay(${a}, ${b}) =&gt; ${result}`);
+        return result;
     }
 &nbsp;
     public static <span class="fstat-no" title="function not covered" >isMidnight (date: Date): boolean {</span>
-<span class="cstat-no" title="statement not covered" >        return Boolean(</span>
+<span class="cstat-no" title="statement not covered" >        const result = Boolean(</span>
 <span class="cstat-no" title="statement not covered" >            !date.getHours() &amp;&amp;</span>
 <span class="cstat-no" title="statement not covered" >            !date.getMinutes() &amp;&amp;</span>
 <span class="cstat-no" title="statement not covered" >            !date.getSeconds() &amp;&amp;</span>
 <span class="cstat-no" title="statement not covered" >            !date.getMilliseconds()</span>
 <span class="cstat-no" title="statement not covered" >        );</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        console.log(`isMidnight(${date}) =&gt; ${result}`);</span>
+<span class="cstat-no" title="statement not covered" >        return result;</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
 &nbsp;
     public async <span class="fstat-no" title="function not covered" >fetchURLs(urls: string[]): Promise&lt;CalendarPageItem[]&gt; {</span>
@@ -478,7 +496,7 @@ export default class CalendarPage implements Page&lt;CalendarPagePayload&gt; {
 <span class="cstat-no" title="statement not covered" >            .then(calendar =&gt; calendar.filter(entry =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >                if (CalendarPage.isMidnight(entry.start) &amp;&amp; CalendarPage.isMidnight(entry.end)) {</span>
 <span class="cstat-no" title="statement not covered" >                    return CalendarPage.isSameDay(new Date(), entry.start) ||</span>
-<span class="cstat-no" title="statement not covered" >                        CalendarPage.isSameDay(new Date(), entry.end);</span>
+<span class="cstat-no" title="statement not covered" >                        CalendarPage.isSameDay(new Date(new Date().getTime() + 1000 * 60 * 60 * 24), entry.start);</span>
 <span class="cstat-no" title="statement not covered" >                } else {</span>
 <span class="cstat-no" title="statement not covered" >                    return entry.start &lt; new Date(new Date().getTime() + (1000 * 60 * 60 * 12));</span>
 <span class="cstat-no" title="statement not covered" >                }</span>
@@ -517,7 +535,7 @@ export default class CalendarPage implements Page&lt;CalendarPagePayload&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-07-25T18:17:18.481Z
+                at 2022-08-16T19:22:18.581Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
