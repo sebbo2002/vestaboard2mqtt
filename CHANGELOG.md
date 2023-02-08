@@ -1,3 +1,5 @@
+## [2.0.5](https://github.com/sebbo2002/vestaboard2mqtt/compare/v2.0.4...v2.0.5) (2023-02-08)
+
 ## [2.0.5-develop.5](https://github.com/sebbo2002/vestaboard2mqtt/compare/v2.0.5-develop.4...v2.0.5-develop.5) (2023-02-08)
 
 ## [2.0.5-develop.4](https://github.com/sebbo2002/vestaboard2mqtt/compare/v2.0.5-develop.3...v2.0.5-develop.4) (2023-02-05)
