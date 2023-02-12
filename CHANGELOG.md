@@ -1,3 +1,21 @@
+# [3.0.0-develop.1](https://github.com/sebbo2002/vestaboard2mqtt/compare/v2.0.5...v3.0.0-develop.1) (2023-02-12)
+
+
+### Bug Fixes
+
+* Fix CalendarPage date issue ([5a8937a](https://github.com/sebbo2002/vestaboard2mqtt/commit/5a8937a5eec34177ed46ee54542a1076ba34c127))
+* Update MQTT Client import ([21a3ebd](https://github.com/sebbo2002/vestaboard2mqtt/commit/21a3ebd227dd566de5e8a02e475b291da3ecac40))
+
+
+### Build System
+
+* Deprecate node.js 12 ([426588b](https://github.com/sebbo2002/vestaboard2mqtt/commit/426588b4bb7bde2924bbc92006ca839e960872e1))
+
+
+### BREAKING CHANGES
+
+* From now on, only node.js ^14.8.0 || >=16.0.0 are supported
+
 ## [2.0.5](https://github.com/sebbo2002/vestaboard2mqtt/compare/v2.0.4...v2.0.5) (2023-02-08)
 
 ## [2.0.5-develop.5](https://github.com/sebbo2002/vestaboard2mqtt/compare/v2.0.5-develop.4...v2.0.5-develop.5) (2023-02-08)
