@@ -62,12 +62,11 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
 
     public static isSameDay (a: Date, b: Date): boolean {
         const result = Boolean(
-            a.getUTCFullYear() === b.getUTCFullYear() &&
-            a.getUTCMonth() === b.getUTCMonth() &&
-            a.getUTCDate() === b.getUTCDate()
+            a.getFullYear() === b.getFullYear() &&
+            a.getMonth() === b.getMonth() &&
+            a.getDate() === b.getDate()
         );
 
-        console.log(`isSameDay(${a}, ${b}) => ${result}`);
         return result;
     }
 
@@ -79,7 +78,6 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
             !date.getMilliseconds()
         );
 
-        console.log(`isMidnight(${date}) => ${result}`);
         return result;
     }
 
@@ -91,7 +89,7 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
             .sort((a, b) => a.end.getTime() - b.end.getTime());
     }
 
-    public static getTimeStr (event: CalendarPageItem): string {
+    public static getTimeStr (event: CalendarPageItem, oneLine = false): string {
         if(
             this.isMidnight(event.start) &&
             this.isMidnight(event.end) &&
@@ -104,7 +102,7 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
             this.isMidnight(event.end) &&
             this.isSameDay(new Date(new Date().getTime() + 1000 * 60 * 60 * 24), event.start)
         ) {
-            return 'Morgn';
+            return oneLine ? 'Morgen' : 'Morgn';
         }
 
         return event.start.getHours().toString().padStart(2, '⬛️') + ':' +
@@ -120,8 +118,10 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
         const calendar = await this.fetchURLs(urls)
             .then(calendar => calendar.filter(entry => {
                 if (CalendarPage.isMidnight(entry.start) && CalendarPage.isMidnight(entry.end)) {
-                    return CalendarPage.isSameDay(new Date(), entry.start) ||
-                        CalendarPage.isSameDay(new Date(new Date().getTime() + 1000 * 60 * 60 * 24), entry.start);
+                    return CalendarPage.isSameDay(new Date(), entry.start) || (
+                        new Date().getHours() >= 20 &&
+                        CalendarPage.isSameDay(new Date(new Date().getTime() + 1000 * 60 * 60 * 24), entry.start)
+                    );
                 } else {
                     return entry.start < new Date(new Date().getTime() + (1000 * 60 * 60 * 12));
                 }
@@ -136,9 +136,12 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
 
         let validTill = new Date(new Date().getTime() + 1000 * 60 * 10);
         calendar.forEach(event => {
-            message.write(CalendarPage.getTimeStr(event), {line: MessageWriteOptionsLine.NEXT});
-            message.write(event.summary, {line: MessageWriteOptionsLine.CURRENT, row: 6});
+            message.write(
+                CalendarPage.getTimeStr(event, calendar.length === 1),
+                {line: MessageWriteOptionsLine.NEXT}
+            );
 
+            message.write(event.summary, {line: MessageWriteOptionsLine.CURRENT, row: 6});
             message.write('', {line: MessageWriteOptionsLine.NEXT});
 
             if(event.end < validTill) {
