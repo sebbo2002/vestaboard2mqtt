@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">27.09% </span>
+                <span class="strong">25.94% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>42/155</span>
+                <span class='fraction'>41/158</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">27.09% </span>
+                <span class="strong">25.94% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>42/155</span>
+                <span class='fraction'>41/158</span>
             </div>
         
             
@@ -218,7 +218,10 @@
 <a name='L153'></a><a href='#L153'>153</a>
 <a name='L154'></a><a href='#L154'>154</a>
 <a name='L155'></a><a href='#L155'>155</a>
-<a name='L156'></a><a href='#L156'>156</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -289,21 +292,11 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -318,6 +311,14 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -332,6 +333,11 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -437,12 +443,11 @@ export default class CalendarPage implements Page&lt;CalendarPagePayload&gt; {
 &nbsp;
     public static isSameDay (a: Date, b: Date): boolean {
         const result = Boolean(
-            a.getUTCFullYear() === b.getUTCFullYear() &amp;&amp;
-            a.getUTCMonth() === b.getUTCMonth() &amp;&amp;
-            a.getUTCDate() === b.getUTCDate()
+            a.getFullYear() === b.getFullYear() &amp;&amp;
+            a.getMonth() === b.getMonth() &amp;&amp;
+            a.getDate() === b.getDate()
         );
 &nbsp;
-        console.log(`isSameDay(${a}, ${b}) =&gt; ${result}`);
         return result;
     }
 &nbsp;
@@ -454,7 +459,6 @@ export default class CalendarPage implements Page&lt;CalendarPagePayload&gt; {
 <span class="cstat-no" title="statement not covered" >            !date.getMilliseconds()</span>
 <span class="cstat-no" title="statement not covered" >        );</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >        console.log(`isMidnight(${date}) =&gt; ${result}`);</span>
 <span class="cstat-no" title="statement not covered" >        return result;</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
 &nbsp;
@@ -466,7 +470,7 @@ export default class CalendarPage implements Page&lt;CalendarPagePayload&gt; {
 <span class="cstat-no" title="statement not covered" >            .sort((a, b) =&gt; a.end.getTime() - b.end.getTime());</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
 &nbsp;
-    public static <span class="fstat-no" title="function not covered" >getTimeStr (event: CalendarPageItem): string {</span>
+    public static <span class="fstat-no" title="function not covered" >getTimeStr (event: CalendarPageItem, oneLine = false): string {</span>
 <span class="cstat-no" title="statement not covered" >        if(</span>
 <span class="cstat-no" title="statement not covered" >            this.isMidnight(event.start) &amp;&amp;</span>
 <span class="cstat-no" title="statement not covered" >            this.isMidnight(event.end) &amp;&amp;</span>
@@ -479,7 +483,7 @@ export default class CalendarPage implements Page&lt;CalendarPagePayload&gt; {
 <span class="cstat-no" title="statement not covered" >            this.isMidnight(event.end) &amp;&amp;</span>
 <span class="cstat-no" title="statement not covered" >            this.isSameDay(new Date(new Date().getTime() + 1000 * 60 * 60 * 24), event.start)</span>
 <span class="cstat-no" title="statement not covered" >        ) {</span>
-<span class="cstat-no" title="statement not covered" >            return 'Morgn';</span>
+<span class="cstat-no" title="statement not covered" >            return oneLine ? 'Morgen' : 'Morgn';</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >        return event.start.getHours().toString().padStart(2, '⬛️') + ':' +</span>
@@ -495,8 +499,10 @@ export default class CalendarPage implements Page&lt;CalendarPagePayload&gt; {
 <span class="cstat-no" title="statement not covered" >        const calendar = await this.fetchURLs(urls)</span>
 <span class="cstat-no" title="statement not covered" >            .then(calendar =&gt; calendar.filter(entry =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >                if (CalendarPage.isMidnight(entry.start) &amp;&amp; CalendarPage.isMidnight(entry.end)) {</span>
-<span class="cstat-no" title="statement not covered" >                    return CalendarPage.isSameDay(new Date(), entry.start) ||</span>
-<span class="cstat-no" title="statement not covered" >                        CalendarPage.isSameDay(new Date(new Date().getTime() + 1000 * 60 * 60 * 24), entry.start);</span>
+<span class="cstat-no" title="statement not covered" >                    return CalendarPage.isSameDay(new Date(), entry.start) || (</span>
+<span class="cstat-no" title="statement not covered" >                        new Date().getHours() &gt;= 20 &amp;&amp;</span>
+<span class="cstat-no" title="statement not covered" >                        CalendarPage.isSameDay(new Date(new Date().getTime() + 1000 * 60 * 60 * 24), entry.start)</span>
+<span class="cstat-no" title="statement not covered" >                    );</span>
 <span class="cstat-no" title="statement not covered" >                } else {</span>
 <span class="cstat-no" title="statement not covered" >                    return entry.start &lt; new Date(new Date().getTime() + (1000 * 60 * 60 * 12));</span>
 <span class="cstat-no" title="statement not covered" >                }</span>
@@ -511,9 +517,12 @@ export default class CalendarPage implements Page&lt;CalendarPagePayload&gt; {
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >        let validTill = new Date(new Date().getTime() + 1000 * 60 * 10);</span>
 <span class="cstat-no" title="statement not covered" >        calendar.forEach(event =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >            message.write(CalendarPage.getTimeStr(event), {line: MessageWriteOptionsLine.NEXT});</span>
-<span class="cstat-no" title="statement not covered" >            message.write(event.summary, {line: MessageWriteOptionsLine.CURRENT, row: 6});</span>
+<span class="cstat-no" title="statement not covered" >            message.write(</span>
+<span class="cstat-no" title="statement not covered" >                CalendarPage.getTimeStr(event, calendar.length === 1),</span>
+<span class="cstat-no" title="statement not covered" >                {line: MessageWriteOptionsLine.NEXT}</span>
+<span class="cstat-no" title="statement not covered" >            );</span>
 <span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            message.write(event.summary, {line: MessageWriteOptionsLine.CURRENT, row: 6});</span>
 <span class="cstat-no" title="statement not covered" >            message.write('', {line: MessageWriteOptionsLine.NEXT});</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >            if(event.end &lt; validTill) {</span>
@@ -535,7 +544,7 @@ export default class CalendarPage implements Page&lt;CalendarPagePayload&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-02-08T18:58:28.485Z
+                at 2023-02-12T20:25:54.626Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

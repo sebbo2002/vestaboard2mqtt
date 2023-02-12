@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="982" lines-covered="506" line-rate="0.5152" branches-valid="118" branches-covered="97" branch-rate="0.8220000000000001" timestamp="1675882708467" complexity="0" version="0.1">
+<coverage lines-valid="985" lines-covered="505" line-rate="0.5126" branches-valid="118" branches-covered="97" branch-rate="0.8220000000000001" timestamp="1676233554611" complexity="0" version="0.1">
   <sources>
     <source>/home/runner/work/vestaboard2mqtt/vestaboard2mqtt</source>
   </sources>
@@ -889,9 +889,9 @@
         </class>
       </classes>
     </package>
-    <package name="lib.pages" line-rate="0.2089" branch-rate="0.5">
+    <package name="lib.pages" line-rate="0.20329999999999998" branch-rate="0.5">
       <classes>
-        <class name="calendar.ts" filename="src/lib/pages/calendar.ts" line-rate="0.2709" branch-rate="1">
+        <class name="calendar.ts" filename="src/lib/pages/calendar.ts" line-rate="0.2594" branch-rate="1">
           <methods>
             <method name="parsePayload" hits="0" signature="()V">
               <lines>
@@ -915,22 +915,22 @@
             </method>
             <method name="isMidnight" hits="0" signature="()V">
               <lines>
-                <line number="74" hits="0"/>
+                <line number="73" hits="0"/>
               </lines>
             </method>
             <method name="fetchURLs" hits="0" signature="()V">
               <lines>
-                <line number="86" hits="0"/>
+                <line number="84" hits="0"/>
               </lines>
             </method>
             <method name="getTimeStr" hits="0" signature="()V">
               <lines>
-                <line number="94" hits="0"/>
+                <line number="92" hits="0"/>
               </lines>
             </method>
             <method name="render" hits="0" signature="()V">
               <lines>
-                <line number="114" hits="0"/>
+                <line number="112" hits="0"/>
               </lines>
             </method>
           </methods>
@@ -1006,9 +1006,9 @@
             <line number="69" hits="2" branch="false"/>
             <line number="70" hits="2" branch="false"/>
             <line number="71" hits="2" branch="false"/>
-            <line number="72" hits="2" branch="false"/>
+            <line number="72" hits="1" branch="false"/>
             <line number="73" hits="1" branch="false"/>
-            <line number="74" hits="1" branch="false"/>
+            <line number="74" hits="0" branch="false"/>
             <line number="75" hits="0" branch="false"/>
             <line number="76" hits="0" branch="false"/>
             <line number="77" hits="0" branch="false"/>
@@ -1017,18 +1017,18 @@
             <line number="80" hits="0" branch="false"/>
             <line number="81" hits="0" branch="false"/>
             <line number="82" hits="0" branch="false"/>
-            <line number="83" hits="0" branch="false"/>
-            <line number="84" hits="0" branch="false"/>
-            <line number="85" hits="1" branch="false"/>
-            <line number="86" hits="1" branch="false"/>
+            <line number="83" hits="1" branch="false"/>
+            <line number="84" hits="1" branch="false"/>
+            <line number="85" hits="0" branch="false"/>
+            <line number="86" hits="0" branch="false"/>
             <line number="87" hits="0" branch="false"/>
             <line number="88" hits="0" branch="false"/>
             <line number="89" hits="0" branch="false"/>
             <line number="90" hits="0" branch="false"/>
-            <line number="91" hits="0" branch="false"/>
-            <line number="92" hits="0" branch="false"/>
-            <line number="93" hits="1" branch="false"/>
-            <line number="94" hits="1" branch="false"/>
+            <line number="91" hits="1" branch="false"/>
+            <line number="92" hits="1" branch="false"/>
+            <line number="93" hits="0" branch="false"/>
+            <line number="94" hits="0" branch="false"/>
             <line number="95" hits="0" branch="false"/>
             <line number="96" hits="0" branch="false"/>
             <line number="97" hits="0" branch="false"/>
@@ -1045,10 +1045,10 @@
             <line number="108" hits="0" branch="false"/>
             <line number="109" hits="0" branch="false"/>
             <line number="110" hits="0" branch="false"/>
-            <line number="111" hits="0" branch="false"/>
-            <line number="112" hits="0" branch="false"/>
-            <line number="113" hits="1" branch="false"/>
-            <line number="114" hits="1" branch="false"/>
+            <line number="111" hits="1" branch="false"/>
+            <line number="112" hits="1" branch="false"/>
+            <line number="113" hits="0" branch="false"/>
+            <line number="114" hits="0" branch="false"/>
             <line number="115" hits="0" branch="false"/>
             <line number="116" hits="0" branch="false"/>
             <line number="117" hits="0" branch="false"/>
@@ -1089,7 +1089,10 @@
             <line number="152" hits="0" branch="false"/>
             <line number="153" hits="0" branch="false"/>
             <line number="154" hits="0" branch="false"/>
-            <line number="155" hits="1" branch="false"/>
+            <line number="155" hits="0" branch="false"/>
+            <line number="156" hits="0" branch="false"/>
+            <line number="157" hits="0" branch="false"/>
+            <line number="158" hits="1" branch="false"/>
           </lines>
         </class>
         <class name="index.ts" filename="src/lib/pages/index.ts" line-rate="0" branch-rate="0">
