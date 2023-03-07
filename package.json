@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "async-mqtt": "^2.6.3",
-    "node-ical": "^0.15.3",
+    "node-ical": "^0.16.0",
     "vestaboard-api": "^1.1.4"
   },
   "description": "Small script to connect a Vestaboard with my home automation via MQTT.",
