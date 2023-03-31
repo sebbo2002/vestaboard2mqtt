@@ -1,7 +1,7 @@
 import mqtt from 'async-mqtt';
 import Config from './config.js';
 import Cache from './cache.js';
-import {MqttClient} from 'mqtt/types/lib/client';
+import { MqttClient } from 'mqtt';
 import Message from './message.js';
 import pages from './pages/index.js';
 import Page from './page.js';
