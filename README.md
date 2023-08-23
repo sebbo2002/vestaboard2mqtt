@@ -1,47 +1,41 @@
-# template
+# vestaboard2mqtt
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 
-Here would be a very short description of the project. So in this example it would be a short information that this is
-a template that I use to start new projects and services.
-
-
-## 🚨 Template Usage Checklist
-- [ ] Update project name in `package.json`
-- [ ] Create `main` and `develop` branches
-- [ ] Set `develop` as default branch
-- [ ] Create Docker Repository
-    - [ ] Add Repository Description
-    - [ ] Add secret: `DOCKERHUB_TOKEN`
-- [ ] Create npm Repository with `npm publish --access public`
-    - [ ] Add secret: `NPM_TOKEN`
-- [ ] Go through repo settings
+Small script to connect a Vestaboard with my home automation via MQTT.
+Can display messages, the current day or a calendar.
 
 
 ## 📦 Installation
 
-	git clone https://github.com/sebbo2002/template.git
-    cd ./template
+	npm install -g @sebbo2002/vestaboard2mqtt
 
-    npm install
-
-
-## ⚡️ Quick Start
-
-This is where it would normally say how to use the project.
-This could be a code example for a library or instructions on how to use a CLI tool.
+Configuration is expected in the file "~/.vestaboard2mqtt". An example file is in the root folder.
+Please stop the script before editing.
 
 
-## 📑 API-Reference
+## 📑 Pages
 
-Is there an API that needs to be documented? Then here would be a nice place for it. If there is external documentation,
-you can link it here ([example](https://github.com/sebbo2002/ical-generator/#-api-reference)).
+### Simple Message
 
+Displays a message on the board. To do this, send the content of the message to `:prefix/message`.
 
-## 🙋 FAQ
+### Today
 
-### What's `1` + `2`
-It's `3` 🎉
+Displays today's day of the week and the date. Can optionally be extended with the temperature and
+the probability of rain.
+
+Activated with a message to `:prefix/today`. The weather data can either be sent as JSON
+(`{"temp": [16, 28], "precip": 5}`) or set individually (e.g. `:prefix/today/min-temp` or
+`:prefix/today/precip`).
+
+### Calendar
+
+Displays the next entries for one or more selected calendars. Calendars are set in the file
+beforehand. The calendar is activated with `:prefix/calendar`, specifying the list of
+calendars to be viewed, comma-separated.
+
+If there are no entries for the current day, the display of Today (see above) is output.
 
 
 ## 🙆🏼‍♂️ Copyright and license
