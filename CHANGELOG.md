@@ -1,3 +1,21 @@
+## [4.0.2-develop.4](https://github.com/sebbo2002/vestaboard2mqtt/compare/v4.0.2-develop.3...v4.0.2-develop.4) (2023-10-18)
+
+
+### Reverts
+
+* Revert "ci: Run tests with node.js v18, v20 and v21" ([1b245a5](https://github.com/sebbo2002/vestaboard2mqtt/commit/1b245a58587bc6871e8b1633beff1f1bca05970f))
+
+## [4.0.2-develop.3](https://github.com/sebbo2002/vestaboard2mqtt/compare/v4.0.2-develop.2...v4.0.2-develop.3) (2023-09-27)
+
+## [4.0.2-develop.2](https://github.com/sebbo2002/vestaboard2mqtt/compare/v4.0.2-develop.1...v4.0.2-develop.2) (2023-09-01)
+
+## [4.0.2-develop.1](https://github.com/sebbo2002/vestaboard2mqtt/compare/v4.0.1...v4.0.2-develop.1) (2023-08-23)
+
+
+### Reverts
+
+* Revert "ci: Downgrade is-semantic-release till it's fixed" ([91c2ab5](https://github.com/sebbo2002/vestaboard2mqtt/commit/91c2ab59d0559a060c11d07973382c465dd3345d))
+
 ## [4.0.1](https://github.com/sebbo2002/vestaboard2mqtt/compare/v4.0.0...v4.0.1) (2023-07-19)
 
 ## [4.0.1-develop.1](https://github.com/sebbo2002/vestaboard2mqtt/compare/v4.0.0...v4.0.1-develop.1) (2023-06-28)
