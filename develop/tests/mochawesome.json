@@ -5,9 +5,9 @@
     "passes": 19,
     "pending": 0,
     "failures": 0,
-    "start": "2023-12-22T10:00:21.177Z",
-    "end": "2023-12-22T10:00:21.210Z",
-    "duration": 33,
+    "start": "2023-12-26T18:43:23.444Z",
+    "end": "2023-12-26T18:43:23.482Z",
+    "duration": 38,
     "testsRegistered": 19,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "6b80637a-0e6c-4c89-a316-36f0324931bc",
+      "uuid": "090824e0-c449-4dd5-a89f-f36154af5ff8",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "aeb8f6de-141e-4921-9280-f40cb4a1637a",
+          "uuid": "81c3934d-3521-4a68-b3f9-a1f74d4d98ef",
           "title": "Cache",
           "fullFile": "/home/runner/work/vestaboard2mqtt/vestaboard2mqtt/test/lib/cache.ts",
           "file": "/test/lib/cache.ts",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "78f04fdf-7196-4b14-ad28-10f26e8c2223",
+              "uuid": "75f87a6b-697f-470a-8b59-a9741dd56f6a",
               "title": "set() / get() / delete()",
               "fullFile": "/home/runner/work/vestaboard2mqtt/vestaboard2mqtt/test/lib/cache.ts",
               "file": "/test/lib/cache.ts",
@@ -56,15 +56,15 @@
                   "context": null,
                   "code": "return __awaiter(this, void 0, void 0, function* () {\n    const cache = new Cache('tests');\n    assert.strictEqual(yield cache.get('test'), null);\n    yield cache.set('test', 'foo');\n    assert.strictEqual(yield cache.get('test'), 'foo');\n    yield cache.delete('test');\n});",
                   "err": {},
-                  "uuid": "48361fca-709a-448b-a0e9-bf481697e612",
-                  "parentUUID": "78f04fdf-7196-4b14-ad28-10f26e8c2223",
+                  "uuid": "a322cbf8-f4f8-442d-8f54-f03dbd9ee3e6",
+                  "parentUUID": "75f87a6b-697f-470a-8b59-a9741dd56f6a",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "48361fca-709a-448b-a0e9-bf481697e612"
+                "a322cbf8-f4f8-442d-8f54-f03dbd9ee3e6"
               ],
               "failures": [],
               "pending": [],
@@ -85,7 +85,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "87455b91-0d66-4e5b-b8f6-44cca30cb03d",
+          "uuid": "d2254796-7f4b-49d0-b948-cd96657e6eb9",
           "title": "Calendar",
           "fullFile": "/home/runner/work/vestaboard2mqtt/vestaboard2mqtt/test/lib/calendar.ts",
           "file": "/test/lib/calendar.ts",
@@ -94,7 +94,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "86c87eb5-90f0-457b-a8f3-5e80bc0d0a71",
+              "uuid": "1cde6f96-9966-4f46-ab78-cb919645ae5f",
               "title": "isSameDay()",
               "fullFile": "/home/runner/work/vestaboard2mqtt/vestaboard2mqtt/test/lib/calendar.ts",
               "file": "/test/lib/calendar.ts",
@@ -105,7 +105,7 @@
                   "title": "should work (1)",
                   "fullTitle": "Calendar isSameDay() should work (1)",
                   "timedOut": false,
-                  "duration": 0,
+                  "duration": 1,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -114,8 +114,8 @@
                   "context": null,
                   "code": "const a = new Date();\nconst b = new Date();\nassert.equal(CalendarPage.isSameDay(a, b), true);",
                   "err": {},
-                  "uuid": "cbbbefb9-447b-450d-b799-19d79357461d",
-                  "parentUUID": "86c87eb5-90f0-457b-a8f3-5e80bc0d0a71",
+                  "uuid": "d4f7a4f8-186f-494d-9c86-4a6f24411d28",
+                  "parentUUID": "1cde6f96-9966-4f46-ab78-cb919645ae5f",
                   "isHook": false,
                   "skipped": false
                 },
@@ -132,21 +132,21 @@
                   "context": null,
                   "code": "const a = new Date('2022-01-10T10:35:00.000Z');\nconst b = new Date('2022-02-10T10:35:00.000Z');\nassert.equal(CalendarPage.isSameDay(a, b), false);",
                   "err": {},
-                  "uuid": "e47d5a01-a123-4546-9f76-0a83ddd8bd48",
-                  "parentUUID": "86c87eb5-90f0-457b-a8f3-5e80bc0d0a71",
+                  "uuid": "43782dd0-3568-42de-b92b-4ebceb639388",
+                  "parentUUID": "1cde6f96-9966-4f46-ab78-cb919645ae5f",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "cbbbefb9-447b-450d-b799-19d79357461d",
-                "e47d5a01-a123-4546-9f76-0a83ddd8bd48"
+                "d4f7a4f8-186f-494d-9c86-4a6f24411d28",
+                "43782dd0-3568-42de-b92b-4ebceb639388"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 0,
+              "duration": 1,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
@@ -162,7 +162,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "98e02278-8cce-4e83-a444-da50d0b0a15c",
+          "uuid": "1692af53-f964-4fd1-9b26-b153f47e2250",
           "title": "Message",
           "fullFile": "/home/runner/work/vestaboard2mqtt/vestaboard2mqtt/test/lib/message.ts",
           "file": "/test/lib/message.ts",
@@ -171,7 +171,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "38fcaa84-134d-40f8-8759-de7175b0ab45",
+              "uuid": "562369aa-76ab-45e0-ad5d-1349986f5c31",
               "title": "write()",
               "fullFile": "/home/runner/work/vestaboard2mqtt/vestaboard2mqtt/test/lib/message.ts",
               "file": "/test/lib/message.ts",
@@ -191,8 +191,8 @@
                   "context": null,
                   "code": "const msg = new Message();\nmsg.write('Hello World');\nassert.strictEqual(msg.toString(), '#==============================================#\\n' +\n    '# H E L L O   W O R L D                        #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#==============================================#\\n');",
                   "err": {},
-                  "uuid": "9863fd62-e038-458a-a75d-3b32c0b96574",
-                  "parentUUID": "38fcaa84-134d-40f8-8759-de7175b0ab45",
+                  "uuid": "85bd6f37-dfe8-46f9-8717-c3c99bd49bcd",
+                  "parentUUID": "562369aa-76ab-45e0-ad5d-1349986f5c31",
                   "isHook": false,
                   "skipped": false
                 },
@@ -200,7 +200,7 @@
                   "title": "should accept line & row for positioning",
                   "fullTitle": "Message write() should accept line & row for positioning",
                   "timedOut": false,
-                  "duration": 2,
+                  "duration": 3,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -209,8 +209,8 @@
                   "context": null,
                   "code": "const msg = new Message();\nmsg.write('Hello World', {\n    line: 2,\n    row: 5\n});\nassert.strictEqual(msg.toString(), '#==============================================#\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#           H E L L O   W O R L D              #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#==============================================#\\n');",
                   "err": {},
-                  "uuid": "1899485c-3089-4df3-858e-a04c72f4ec19",
-                  "parentUUID": "38fcaa84-134d-40f8-8759-de7175b0ab45",
+                  "uuid": "9e9c649d-f299-48fe-b151-01c451aeb352",
+                  "parentUUID": "562369aa-76ab-45e0-ad5d-1349986f5c31",
                   "isHook": false,
                   "skipped": false
                 },
@@ -218,7 +218,7 @@
                   "title": "should add another line if text is too long",
                   "fullTitle": "Message write() should add another line if text is too long",
                   "timedOut": false,
-                  "duration": 3,
+                  "duration": 5,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -227,8 +227,8 @@
                   "context": null,
                   "code": "const msg = new Message();\nmsg.write('Lorem ipsum dolor sit amet, ' +\n    'consetetur sadipscing elitr, sed ' +\n    'diam nonumy eirmod tempor invidunt');\nassert.strictEqual(msg.toString(), '#==============================================#\\n' +\n    '# L O R E M   I P S U M   D O L O R   S I T    #\\n' +\n    '# A M E T ,   C O N S E T E T U R              #\\n' +\n    '# S A D I P S C I N G   E L I T R ,   S E D    #\\n' +\n    '# D I A M   N O N U M Y   E I R M O D          #\\n' +\n    '# T E M P O R   I N V I D U N T                #\\n' +\n    '#                                              #\\n' +\n    '#==============================================#\\n');",
                   "err": {},
-                  "uuid": "6ecded8e-09ba-4013-8197-9022e92309a7",
-                  "parentUUID": "38fcaa84-134d-40f8-8759-de7175b0ab45",
+                  "uuid": "b549637d-76e7-4540-87ed-4f9767ca5872",
+                  "parentUUID": "562369aa-76ab-45e0-ad5d-1349986f5c31",
                   "isHook": false,
                   "skipped": false
                 },
@@ -236,7 +236,7 @@
                   "title": "should work with words > board length",
                   "fullTitle": "Message write() should work with words > board length",
                   "timedOut": false,
-                  "duration": 2,
+                  "duration": 4,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -245,8 +245,8 @@
                   "context": null,
                   "code": "const msg = new Message();\nmsg.write('Lorem-ipsum-dolor-sit-amet');\nassert.strictEqual(msg.toString(), '#==============================================#\\n' +\n    '# L O R E M - I P S U M - D O L O R - S I T -  #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#==============================================#\\n');",
                   "err": {},
-                  "uuid": "358cdecd-ec66-4443-8347-9d8ffadb3186",
-                  "parentUUID": "38fcaa84-134d-40f8-8759-de7175b0ab45",
+                  "uuid": "ae32de50-840e-420f-8239-15c1423a11e8",
+                  "parentUUID": "562369aa-76ab-45e0-ad5d-1349986f5c31",
                   "isHook": false,
                   "skipped": false
                 },
@@ -254,7 +254,7 @@
                   "title": "should allow to use CURRENT and NEXT line flags",
                   "fullTitle": "Message write() should allow to use CURRENT and NEXT line flags",
                   "timedOut": false,
-                  "duration": 3,
+                  "duration": 2,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -263,8 +263,8 @@
                   "context": null,
                   "code": "const msg = new Message();\nmsg.write('13:00', { line: MessageWriteOptionsLine.CURRENT });\nmsg.write('Daily', { line: MessageWriteOptionsLine.CURRENT, row: 6 });\nmsg.write('', { line: MessageWriteOptionsLine.NEXT });\nmsg.write('18:00', { line: MessageWriteOptionsLine.NEXT });\nmsg.write('Fischstäbchen, Spinat & Ei', { line: MessageWriteOptionsLine.CURRENT, row: 6 });\nmsg.write('', { line: MessageWriteOptionsLine.NEXT });\nmsg.write('20:00', { line: MessageWriteOptionsLine.NEXT });\nmsg.write('Sandmännchen', { line: MessageWriteOptionsLine.CURRENT, row: 6 });\nassert.strictEqual(msg.toString(), '#==============================================#\\n' +\n    '# 1 3 : 0 0   D A I L Y                        #\\n' +\n    '#                                              #\\n' +\n    '# 1 8 : 0 0   F I S C H S T A E B C H E N ,    #\\n' +\n    '#             S P I N A T   &   E I            #\\n' +\n    '#                                              #\\n' +\n    '# 2 0 : 0 0   S A N D M A E N N C H E N        #\\n' +\n    '#==============================================#\\n');",
                   "err": {},
-                  "uuid": "89bc2922-7bed-4c5c-bf1a-9510f3dd3203",
-                  "parentUUID": "38fcaa84-134d-40f8-8759-de7175b0ab45",
+                  "uuid": "a4b44a1d-3e34-42b1-a3a0-a8dfb75eceec",
+                  "parentUUID": "562369aa-76ab-45e0-ad5d-1349986f5c31",
                   "isHook": false,
                   "skipped": false
                 },
@@ -281,31 +281,31 @@
                   "context": null,
                   "code": "const msg = new Message();\nmsg.write('💪🏼 Gym');\nassert.strictEqual(msg.toString(), '#==============================================#\\n' +\n    '# G Y M                                        #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#==============================================#\\n');",
                   "err": {},
-                  "uuid": "d43eda82-ead7-482e-b6c8-733780aac586",
-                  "parentUUID": "38fcaa84-134d-40f8-8759-de7175b0ab45",
+                  "uuid": "2fb35962-ed1a-4464-a48b-52e87890badd",
+                  "parentUUID": "562369aa-76ab-45e0-ad5d-1349986f5c31",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "9863fd62-e038-458a-a75d-3b32c0b96574",
-                "1899485c-3089-4df3-858e-a04c72f4ec19",
-                "6ecded8e-09ba-4013-8197-9022e92309a7",
-                "358cdecd-ec66-4443-8347-9d8ffadb3186",
-                "89bc2922-7bed-4c5c-bf1a-9510f3dd3203",
-                "d43eda82-ead7-482e-b6c8-733780aac586"
+                "85bd6f37-dfe8-46f9-8717-c3c99bd49bcd",
+                "9e9c649d-f299-48fe-b151-01c451aeb352",
+                "b549637d-76e7-4540-87ed-4f9767ca5872",
+                "ae32de50-840e-420f-8239-15c1423a11e8",
+                "a4b44a1d-3e34-42b1-a3a0-a8dfb75eceec",
+                "2fb35962-ed1a-4464-a48b-52e87890badd"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 14,
+              "duration": 18,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "c7abffd1-0af3-49f3-b964-7d6f78b38f43",
+              "uuid": "f450ca19-5ded-42b8-910c-944977176b1c",
               "title": "repeat()",
               "fullFile": "/home/runner/work/vestaboard2mqtt/vestaboard2mqtt/test/lib/message.ts",
               "file": "/test/lib/message.ts",
@@ -325,15 +325,15 @@
                   "context": null,
                   "code": "const msg = new Message();\nmsg.repeat('🟧', { line: 2 });\nassert.strictEqual(msg.toString(), '#==============================================#\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '# 🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧 #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#==============================================#\\n');",
                   "err": {},
-                  "uuid": "58c2f1e3-a513-4e49-bb9f-f07fa3f3dc15",
-                  "parentUUID": "c7abffd1-0af3-49f3-b964-7d6f78b38f43",
+                  "uuid": "41fa75cd-aa77-4050-a383-080feffe5f29",
+                  "parentUUID": "f450ca19-5ded-42b8-910c-944977176b1c",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "58c2f1e3-a513-4e49-bb9f-f07fa3f3dc15"
+                "41fa75cd-aa77-4050-a383-080feffe5f29"
               ],
               "failures": [],
               "pending": [],
@@ -344,7 +344,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "04ad9bd9-d497-4feb-85ba-71404d17f8cf",
+              "uuid": "747aa8c8-f373-46af-bdff-1cbd56e387af",
               "title": "word2char()",
               "fullFile": "/home/runner/work/vestaboard2mqtt/vestaboard2mqtt/test/lib/message.ts",
               "file": "/test/lib/message.ts",
@@ -364,8 +364,8 @@
                   "context": null,
                   "code": "assert.deepStrictEqual(Message.word2chars('Hello'), [8, 5, 12, 12, 15]);",
                   "err": {},
-                  "uuid": "cd83134e-22d0-4a3c-883e-b005d54dd2c4",
-                  "parentUUID": "04ad9bd9-d497-4feb-85ba-71404d17f8cf",
+                  "uuid": "3147b0b4-5399-4bfd-9b01-e320b5e91536",
+                  "parentUUID": "747aa8c8-f373-46af-bdff-1cbd56e387af",
                   "isHook": false,
                   "skipped": false
                 },
@@ -382,8 +382,8 @@
                   "context": null,
                   "code": "assert.deepStrictEqual(Message.word2chars('Käse'), [11, 1, 5, 19, 5]);",
                   "err": {},
-                  "uuid": "14c8c651-9ef4-4030-aa90-edc4cc181e6e",
-                  "parentUUID": "04ad9bd9-d497-4feb-85ba-71404d17f8cf",
+                  "uuid": "128320b4-2d6c-433e-a88a-c1fd54b88e71",
+                  "parentUUID": "747aa8c8-f373-46af-bdff-1cbd56e387af",
                   "isHook": false,
                   "skipped": false
                 },
@@ -391,7 +391,7 @@
                   "title": "should handle color emojis",
                   "fullTitle": "Message word2char() should handle color emojis",
                   "timedOut": false,
-                  "duration": 1,
+                  "duration": 0,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -400,8 +400,8 @@
                   "context": null,
                   "code": "assert.deepStrictEqual(Message.word2chars('🟥🟧🟨🟩🟦🟪⬜⬛'), [63, 64, 65, 66, 67, 68, 69, 0]);",
                   "err": {},
-                  "uuid": "180dbead-31ff-4fe4-9731-dfc8697b9757",
-                  "parentUUID": "04ad9bd9-d497-4feb-85ba-71404d17f8cf",
+                  "uuid": "a401b62e-efac-4f51-8cf3-b8f53fa47b3e",
+                  "parentUUID": "747aa8c8-f373-46af-bdff-1cbd56e387af",
                   "isHook": false,
                   "skipped": false
                 },
@@ -418,29 +418,29 @@
                   "context": null,
                   "code": "assert.deepStrictEqual(Message.word2chars('Héllo'), [8, 60, 12, 12, 15]);",
                   "err": {},
-                  "uuid": "7c599965-5d8e-44cc-848c-e591040ac950",
-                  "parentUUID": "04ad9bd9-d497-4feb-85ba-71404d17f8cf",
+                  "uuid": "a55d0949-3606-45a9-b2fa-18a7eded4199",
+                  "parentUUID": "747aa8c8-f373-46af-bdff-1cbd56e387af",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "cd83134e-22d0-4a3c-883e-b005d54dd2c4",
-                "14c8c651-9ef4-4030-aa90-edc4cc181e6e",
-                "180dbead-31ff-4fe4-9731-dfc8697b9757",
-                "7c599965-5d8e-44cc-848c-e591040ac950"
+                "3147b0b4-5399-4bfd-9b01-e320b5e91536",
+                "128320b4-2d6c-433e-a88a-c1fd54b88e71",
+                "a401b62e-efac-4f51-8cf3-b8f53fa47b3e",
+                "a55d0949-3606-45a9-b2fa-18a7eded4199"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 2,
+              "duration": 1,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "bbde5ad1-121b-4106-a7dc-6789665e1ade",
+              "uuid": "620dbfde-9d01-4fa8-9496-b80913f5dbcd",
               "title": "centerLines()",
               "fullFile": "/home/runner/work/vestaboard2mqtt/vestaboard2mqtt/test/lib/message.ts",
               "file": "/test/lib/message.ts",
@@ -451,7 +451,7 @@
                   "title": "should work",
                   "fullTitle": "Message centerLines() should work",
                   "timedOut": false,
-                  "duration": 3,
+                  "duration": 2,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -460,26 +460,26 @@
                   "context": null,
                   "code": "const msg = new Message();\nmsg.write('Hello World');\nmsg.write('This is a test.', { line: MessageWriteOptionsLine.NEXT });\nmsg.centerLines();\nassert.strictEqual(msg.toString(), '#==============================================#\\n' +\n    '#           H E L L O   W O R L D              #\\n' +\n    '#       T H I S   I S   A   T E S T .          #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#==============================================#\\n');",
                   "err": {},
-                  "uuid": "3fd7c307-ceb8-446c-991b-404a1a0ae272",
-                  "parentUUID": "bbde5ad1-121b-4106-a7dc-6789665e1ade",
+                  "uuid": "ca7dcabd-e0bd-405f-b914-28159524cc37",
+                  "parentUUID": "620dbfde-9d01-4fa8-9496-b80913f5dbcd",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "3fd7c307-ceb8-446c-991b-404a1a0ae272"
+                "ca7dcabd-e0bd-405f-b914-28159524cc37"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 3,
+              "duration": 2,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "02bdb6c8-41f3-493b-ae9f-550bf90ae32d",
+              "uuid": "f2ac67ea-614a-4875-908d-274a26c111a8",
               "title": "center()",
               "fullFile": "/home/runner/work/vestaboard2mqtt/vestaboard2mqtt/test/lib/message.ts",
               "file": "/test/lib/message.ts",
@@ -499,15 +499,15 @@
                   "context": null,
                   "code": "const msg = new Message();\nmsg.write('Hello World');\nmsg.write('This is a test.', { line: MessageWriteOptionsLine.NEXT });\nmsg.center();\nassert.strictEqual(msg.toString(), '#==============================================#\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#       H E L L O   W O R L D                  #\\n' +\n    '#       T H I S   I S   A   T E S T .          #\\n' +\n    '#                                              #\\n' +\n    '#                                              #\\n' +\n    '#==============================================#\\n');",
                   "err": {},
-                  "uuid": "38d1ab5d-2916-46d7-a46b-87d89b2aeac8",
-                  "parentUUID": "02bdb6c8-41f3-493b-ae9f-550bf90ae32d",
+                  "uuid": "5a92c4f8-6527-4bbb-b064-1e66f05267ad",
+                  "parentUUID": "f2ac67ea-614a-4875-908d-274a26c111a8",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "38d1ab5d-2916-46d7-a46b-87d89b2aeac8"
+                "5a92c4f8-6527-4bbb-b064-1e66f05267ad"
               ],
               "failures": [],
               "pending": [],
@@ -518,7 +518,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "31adedee-f72b-4a2a-a4a2-eab3cb85d03a",
+              "uuid": "3855ebae-c430-4957-8b0f-35bd6fe15582",
               "title": "isEmpty()",
               "fullFile": "/home/runner/work/vestaboard2mqtt/vestaboard2mqtt/test/lib/message.ts",
               "file": "/test/lib/message.ts",
@@ -538,15 +538,15 @@
                   "context": null,
                   "code": "const msg = new Message();\nassert.strictEqual(msg.isEmpty(), true);\nmsg.write('Hi');\nassert.strictEqual(msg.isEmpty(), false);",
                   "err": {},
-                  "uuid": "03be9eaf-b336-410d-9118-c21d38195fb3",
-                  "parentUUID": "31adedee-f72b-4a2a-a4a2-eab3cb85d03a",
+                  "uuid": "0deeec6b-5175-4375-82e9-1cf9405bb9da",
+                  "parentUUID": "3855ebae-c430-4957-8b0f-35bd6fe15582",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "03be9eaf-b336-410d-9118-c21d38195fb3"
+                "0deeec6b-5175-4375-82e9-1cf9405bb9da"
               ],
               "failures": [],
               "pending": [],
@@ -557,7 +557,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "e5527bc3-fc81-4cb0-85f5-e2e73122584f",
+              "uuid": "44995bc8-a43b-4d55-bf22-931191a96f37",
               "title": "toString()",
               "fullFile": "/home/runner/work/vestaboard2mqtt/vestaboard2mqtt/test/lib/message.ts",
               "file": "/test/lib/message.ts",
@@ -577,8 +577,8 @@
                   "context": null,
                   "code": "const result = new Message().toString();\nconst expected = `#==============================================#\n#                                              #\n#                                              #\n#                                              #\n#                                              #\n#                                              #\n#                                              #\n#==============================================#\n`;\nassert.strictEqual(result, expected);",
                   "err": {},
-                  "uuid": "b67c8f86-530e-4d9f-a474-daeb08e58795",
-                  "parentUUID": "e5527bc3-fc81-4cb0-85f5-e2e73122584f",
+                  "uuid": "2e1cdfe5-88eb-4574-8a8b-890f84fa5d03",
+                  "parentUUID": "44995bc8-a43b-4d55-bf22-931191a96f37",
                   "isHook": false,
                   "skipped": false
                 },
@@ -595,16 +595,16 @@
                   "context": null,
                   "code": "const board = [\n    [\n        0,\n        1,\n        2,\n        3,\n        4,\n        5,\n        6,\n        7,\n        8,\n        9,\n        10,\n        11,\n        12,\n        13,\n        14,\n        15,\n        16,\n        17,\n        18,\n        19,\n        20,\n        21\n    ],\n    [\n        22,\n        23,\n        24,\n        25,\n        26,\n        27,\n        28,\n        29,\n        30,\n        31,\n        32,\n        33,\n        34,\n        35,\n        36,\n        37,\n        38,\n        39,\n        40,\n        41,\n        42,\n        44\n    ],\n    [\n        46,\n        47,\n        48,\n        49,\n        50,\n        52,\n        53,\n        54,\n        55,\n        56,\n        59,\n        60,\n        62,\n        63,\n        64,\n        65,\n        66,\n        67,\n        68,\n        69,\n        70,\n        0\n    ],\n    [\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0\n    ],\n    [\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0\n    ],\n    [\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0,\n        0\n    ]\n];\nconst result = new Message(board).toString();\nconst expected = `#==============================================#\n#   A B C D E F G H I J K L M N O P Q R S T U  #\n# V W X Y Z 1 2 3 4 5 6 7 8 9 0 ! @ # $ ( ) -  #\n# + & = ; : ' \" % , . / ? ° 🟥🟧🟨🟩🟦🟪⬜️     #\n#                                              #\n#                                              #\n#                                              #\n#==============================================#\n`;\nassert.strictEqual(result, expected);",
                   "err": {},
-                  "uuid": "d59d1c3b-e012-4eaf-b50e-8c114071ce9e",
-                  "parentUUID": "e5527bc3-fc81-4cb0-85f5-e2e73122584f",
+                  "uuid": "8a374135-6572-44aa-9dca-c771f9b89b49",
+                  "parentUUID": "44995bc8-a43b-4d55-bf22-931191a96f37",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "b67c8f86-530e-4d9f-a474-daeb08e58795",
-                "d59d1c3b-e012-4eaf-b50e-8c114071ce9e"
+                "2e1cdfe5-88eb-4574-8a8b-890f84fa5d03",
+                "8a374135-6572-44aa-9dca-c771f9b89b49"
               ],
               "failures": [],
               "pending": [],
