@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="681" lines-covered="445" line-rate="0.6534" branches-valid="113" branches-covered="95" branch-rate="0.8406999999999999" timestamp="1710335296282" complexity="0" version="0.1">
+<coverage lines-valid="681" lines-covered="445" line-rate="0.6534" branches-valid="114" branches-covered="96" branch-rate="0.8421" timestamp="1710836520174" complexity="0" version="0.1">
   <sources>
     <source>/home/runner/work/vestaboard2mqtt/vestaboard2mqtt</source>
   </sources>
   <packages>
-    <package name="main" line-rate="0.6534" branch-rate="0.8406999999999999">
+    <package name="main" line-rate="0.6534" branch-rate="0.8421">
       <classes>
-        <class name="cache.ts" filename="src/lib/cache.ts" line-rate="0.8676999999999999" branch-rate="0.6">
+        <class name="cache.ts" filename="src/lib/cache.ts" line-rate="0.8676999999999999" branch-rate="0.6153">
           <methods>
             <method name="Cache" hits="4" signature="()V">
               <lines>
@@ -105,7 +105,7 @@
             <line number="52" hits="2" branch="false"/>
             <line number="53" hits="2" branch="false"/>
             <line number="54" hits="1" branch="false"/>
-            <line number="55" hits="1" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="55" hits="1" branch="true" condition-coverage="100% (2/2)"/>
             <line number="56" hits="2" branch="false"/>
             <line number="57" hits="2" branch="false"/>
             <line number="58" hits="2" branch="false"/>
