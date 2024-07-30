@@ -15,6 +15,8 @@ export default class TodayPage implements Page<Partial<TodayPagePayload>, TodayP
         try {
             return JSON.parse(payload || '') as Partial<TodayPagePayload>;
         }
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         catch(error) {
             return {};
         }
