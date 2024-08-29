@@ -1,5 +1,5 @@
 import Cache from '../cache.js';
-import Page, {PageRenderResponse} from '../page.js';
+import Page, { type PageRenderResponse } from '../page.js';
 import Message, {MessageWriteOptionsLine} from '../message.js';
 
 export interface TodayPagePayload {

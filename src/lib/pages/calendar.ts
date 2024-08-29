@@ -1,9 +1,9 @@
 import Cache from '../cache.js';
-import Page, {PageRenderResponse} from '../page.js';
-import Message, {MessageWriteOptionsLine} from '../message.js';
-import ical, { VEvent } from 'node-ical';
+import Page, { type PageRenderResponse } from '../page.js';
+import Message, {MessageWriteOptionsLine } from '../message.js';
+import ical, { type VEvent } from 'node-ical';
 import Config from '../config.js';
-import TodayPage, {TodayPagePayload} from './today.js';
+import TodayPage, { type TodayPagePayload } from './today.js';
 
 
 export interface CalendarPagePayload {
