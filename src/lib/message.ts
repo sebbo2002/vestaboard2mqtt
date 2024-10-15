@@ -1,4 +1,4 @@
-import {BoardCharArray, characterCode, emptyBoard, LINE_LENGTH} from 'vestaboard-api/lib/cjs/values.js';
+import {type BoardCharArray, characterCode, emptyBoard, LINE_LENGTH} from 'vestaboard-api/lib/cjs/values.js';
 
 export enum MessageWriteOptionsLine {
     CURRENT = 'CURRENT',

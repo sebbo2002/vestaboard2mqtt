@@ -1,5 +1,5 @@
 import Cache from '../cache.js';
-import Page, {PageRenderResponse} from '../page.js';
+import Page, { type PageRenderResponse } from '../page.js';
 import Message, {MessageWriteOptionsLine} from '../message.js';
 
 export interface TodayPagePayload {
@@ -15,6 +15,8 @@ export default class TodayPage implements Page<Partial<TodayPagePayload>, TodayP
         try {
             return JSON.parse(payload || '') as Partial<TodayPagePayload>;
         }
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         catch(error) {
             return {};
         }
