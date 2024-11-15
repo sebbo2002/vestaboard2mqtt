@@ -32,14 +32,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">22.22% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>2/9</span>
             </div>
         
             
@@ -252,11 +252,11 @@ export default class Config {
     private static readonly cache = new Cache('config');
     private static data?: ConfigData;
 &nbsp;
-    public static<span class="fstat-no" title="function not covered" > get loaded(): boolean {</span>
+<span class="fstat-no" title="function not covered" >    public static get loaded(): boolean {</span>
 <span class="cstat-no" title="statement not covered" >        return !!this.data &amp;&amp; !!this.cache;</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
 &nbsp;
-    public static<span class="fstat-no" title="function not covered" > get board(): ConfigBoardData {</span>
+<span class="fstat-no" title="function not covered" >    public static get board(): ConfigBoardData {</span>
 <span class="cstat-no" title="statement not covered" >        if(this.loaded &amp;&amp; this.data?.board) {</span>
 <span class="cstat-no" title="statement not covered" >            return this.data.board;</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
@@ -264,7 +264,7 @@ export default class Config {
 <span class="cstat-no" title="statement not covered" >        throw new Error('Unable to access board config, is config loaded?');</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
 &nbsp;
-    public static<span class="fstat-no" title="function not covered" > get mqtt(): ConfigMQTTData {</span>
+<span class="fstat-no" title="function not covered" >    public static get mqtt(): ConfigMQTTData {</span>
 <span class="cstat-no" title="statement not covered" >        if(this.loaded &amp;&amp; this.data?.mqtt) {</span>
 <span class="cstat-no" title="statement not covered" >            return this.data.mqtt;</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
@@ -272,7 +272,7 @@ export default class Config {
 <span class="cstat-no" title="statement not covered" >        throw new Error('Unable to access mqtt config, is config loaded?');</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
 &nbsp;
-    public static<span class="fstat-no" title="function not covered" > get calendar(): ConfigCalendarData {</span>
+<span class="fstat-no" title="function not covered" >    public static get calendar(): ConfigCalendarData {</span>
 <span class="cstat-no" title="statement not covered" >        if(this.loaded &amp;&amp; this.data?.calendar) {</span>
 <span class="cstat-no" title="statement not covered" >            return this.data.calendar;</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
@@ -280,7 +280,7 @@ export default class Config {
 <span class="cstat-no" title="statement not covered" >        throw new Error('Unable to access calendar config, is config loaded?');</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
 &nbsp;
-    public static async <span class="fstat-no" title="function not covered" >load(): Promise&lt;void&gt; {</span>
+<span class="fstat-no" title="function not covered" >    public static async load(): Promise&lt;void&gt; {</span>
 <span class="cstat-no" title="statement not covered" >        const data = await this.cache.get&lt;ConfigData&gt;('default');</span>
 <span class="cstat-no" title="statement not covered" >        if(!data) {</span>
 <span class="cstat-no" title="statement not covered" >            throw new Error('Unable to load configuration, try to run the setup script…');</span>
@@ -289,12 +289,12 @@ export default class Config {
 <span class="cstat-no" title="statement not covered" >        this.data = data;</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
 &nbsp;
-    public static async <span class="fstat-no" title="function not covered" >save(data: ConfigData): Promise&lt;void&gt; {</span>
+<span class="fstat-no" title="function not covered" >    public static async save(data: ConfigData): Promise&lt;void&gt; {</span>
 <span class="cstat-no" title="statement not covered" >        this.data = data;</span>
 <span class="cstat-no" title="statement not covered" >        await this.cache.set('default', data);</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
 &nbsp;
-    public static async <span class="fstat-no" title="function not covered" >updateDisabled(newValue: boolean): Promise&lt;void&gt; {</span>
+<span class="fstat-no" title="function not covered" >    public static async updateDisabled(newValue: boolean): Promise&lt;void&gt; {</span>
 <span class="cstat-no" title="statement not covered" >        if(newValue === this.data?.board.disabled || !this.loaded || !this.data?.mqtt) {</span>
 <span class="cstat-no" title="statement not covered" >            return;</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
@@ -310,7 +310,7 @@ export default class Config {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-03-07T06:42:42.587Z
+                at 2024-11-15T14:17:20.038Z
             </div>
         <script src="prettify.js"></script>
         <script>

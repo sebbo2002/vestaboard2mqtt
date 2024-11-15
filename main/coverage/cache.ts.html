@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">86.77% </span>
+                <span class="strong">85.95% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>105/121</span>
+                <span class='fraction'>104/121</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">64.28% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>15/25</span>
+                <span class='fraction'>18/28</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">86.77% </span>
+                <span class="strong">85.95% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>105/121</span>
+                <span class='fraction'>104/121</span>
             </div>
         
             
@@ -211,19 +211,11 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -232,6 +224,14 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -256,13 +256,13 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -319,7 +319,7 @@ type CacheValue = unknown;
 const {readFile, writeFile} = promises;
 &nbsp;
 export default class Cache {
-    private static readonly file: string = join(process.env.HOME<span class="branch-0 cbranch-no" title="branch not covered" > || '~',</span> '.vestaboard2mqtt');
+    private static readonly file: string = join(process.env.<span class="branch-0 cbranch-no" title="branch not covered" >HOME || '~', '</span>.vestaboard2mqtt');
     private readonly namespace: string;
     private static currentFetch?: Promise&lt;void&gt;;
     private static currentData?: CacheData = {};
@@ -346,8 +346,8 @@ export default class Cache {
         try {
             const content = await readFile(this.file, {encoding: 'utf8'});
             this.currentData = JSON.parse(content);
-        }
-<span class="branch-0 cbranch-no" title="branch not covered" >        catch(error) {</span>
+<span class="branch-0 cbranch-no" title="branch not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >        catch(error) {</span>
 <span class="cstat-no" title="statement not covered" >            console.warn(`Unable to parse cache file: ${error}`);</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
     }
@@ -371,14 +371,14 @@ export default class Cache {
         }
 &nbsp;
         const item = Cache.currentData[this.namespace][key];
-        if(!Cache.isCacheItemObject(item)<span class="branch-0 cbranch-no" title="branch not covered" > &amp;&amp; maxAge &gt; 0)</span> <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+        if(!Cache.isCacheItemObject(item<span class="branch-0 cbranch-no" title="branch not covered" >) &amp;&amp; maxAge &gt; 0) <span class="branch-0 cbranch-no" title="branch not covered" >{</span></span>
 <span class="cstat-no" title="statement not covered" >            return null;</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
         if(!Cache.isCacheItemObject(item)) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
 <span class="cstat-no" title="statement not covered" >            return item as T;</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
 &nbsp;
-        if(maxAge &gt; 0<span class="branch-0 cbranch-no" title="branch not covered" > &amp;&amp; new Date().getTime() - item.updated &gt; maxAge)</span> <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+        if(maxAge &gt; <span class="branch-0 cbranch-no" title="branch not covered" >0 &amp;&amp; new Date().getTime() - item.updated &gt; maxAge) <span class="branch-0 cbranch-no" title="branch not covered" >{</span></span>
 <span class="cstat-no" title="statement not covered" >            return null;</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
 &nbsp;
@@ -433,7 +433,7 @@ export default class Cache {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-03-07T06:42:42.587Z
+                at 2024-11-15T14:17:20.038Z
             </div>
         <script src="prettify.js"></script>
         <script>
