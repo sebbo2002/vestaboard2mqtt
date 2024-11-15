@@ -1,3 +1,17 @@
+# [5.0.0](https://github.com/sebbo2002/vestaboard2mqtt/compare/v4.0.4...v5.0.0) (2024-11-15)
+
+
+### chore
+
+* Drop support for node.js v19 and v21 ([2fff079](https://github.com/sebbo2002/vestaboard2mqtt/commit/2fff079040a377fbe9ecc340388f6a29b863cf80))
+
+
+### BREAKING CHANGES
+
+* Drop node.js v21 Support
+
+These node.js versions are no longer supported. For more information see https://nodejs.dev/en/about/releases/
+
 ## [4.0.4](https://github.com/sebbo2002/vestaboard2mqtt/compare/v4.0.3...v4.0.4) (2024-03-07)
 
 ## [4.0.3](https://github.com/sebbo2002/vestaboard2mqtt/compare/v4.0.2...v4.0.3) (2023-12-26)
