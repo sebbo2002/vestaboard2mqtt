@@ -1,3 +1,10 @@
+## [5.0.1](https://github.com/sebbo2002/vestaboard2mqtt/compare/v5.0.0...v5.0.1) (2025-01-09)
+
+
+### Bug Fixes
+
+* **deps:** downgrade eslint to v9.13.0 to resolve typescript-eslint issue ([4a1b8a6](https://github.com/sebbo2002/vestaboard2mqtt/commit/4a1b8a628812fc3c623031140e4a9cdc82997d14)), closes [#10353](https://github.com/sebbo2002/vestaboard2mqtt/issues/10353) [typescript-eslint/typescript-eslint#10353](https://github.com/typescript-eslint/typescript-eslint/issues/10353)
+
 # [5.0.0](https://github.com/sebbo2002/vestaboard2mqtt/compare/v4.0.4...v5.0.0) (2024-11-15)
 
 
