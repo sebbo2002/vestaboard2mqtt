@@ -1,64 +1,66 @@
 import Cache from './cache.js';
 
 export interface ConfigBoardData {
+    disabled: boolean;
     id: string;
     key: string;
     secret: string;
-    disabled: boolean;
-}
-
-export interface ConfigMQTTData {
-    url: string;
-    prefix: string;
 }
 
 export interface ConfigCalendarData {
-    urls: Record<string, string>;
     cacheTTL: number;
+    urls: Record<string, string>;
 }
 
 export interface ConfigData {
     board: ConfigBoardData;
-    mqtt: ConfigMQTTData;
     calendar: ConfigCalendarData;
+    mqtt: ConfigMQTTData;
+}
+
+export interface ConfigMQTTData {
+    prefix: string;
+    url: string;
 }
 
 export default class Config {
-    private static readonly cache = new Cache('config');
-    private static data?: ConfigData;
-
-    public static get loaded(): boolean {
-        return !!this.data && !!this.cache;
-    }
-
     public static get board(): ConfigBoardData {
-        if(this.loaded && this.data?.board) {
+        if (this.loaded && this.data?.board) {
             return this.data.board;
         }
 
         throw new Error('Unable to access board config, is config loaded?');
     }
-
-    public static get mqtt(): ConfigMQTTData {
-        if(this.loaded && this.data?.mqtt) {
-            return this.data.mqtt;
-        }
-
-        throw new Error('Unable to access mqtt config, is config loaded?');
-    }
-
     public static get calendar(): ConfigCalendarData {
-        if(this.loaded && this.data?.calendar) {
+        if (this.loaded && this.data?.calendar) {
             return this.data.calendar;
         }
 
         throw new Error('Unable to access calendar config, is config loaded?');
     }
 
+    public static get loaded(): boolean {
+        return !!this.data && !!this.cache;
+    }
+
+    public static get mqtt(): ConfigMQTTData {
+        if (this.loaded && this.data?.mqtt) {
+            return this.data.mqtt;
+        }
+
+        throw new Error('Unable to access mqtt config, is config loaded?');
+    }
+
+    private static readonly cache = new Cache('config');
+
+    private static data?: ConfigData;
+
     public static async load(): Promise<void> {
         const data = await this.cache.get<ConfigData>('default');
-        if(!data) {
-            throw new Error('Unable to load configuration, try to run the setup script…');
+        if (!data) {
+            throw new Error(
+                'Unable to load configuration, try to run the setup script…',
+            );
         }
 
         this.data = data;
@@ -70,7 +72,11 @@ export default class Config {
     }
 
     public static async updateDisabled(newValue: boolean): Promise<void> {
-        if(newValue === this.data?.board.disabled || !this.loaded || !this.data?.mqtt) {
+        if (
+            newValue === this.data?.board.disabled ||
+            !this.loaded ||
+            !this.data?.mqtt
+        ) {
             return;
         }
 

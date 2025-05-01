@@ -1,6 +1,7 @@
 'use strict';
 
 import * as assert from 'assert';
+
 import CalendarPage from '../../src/lib/pages/calendar.js';
 
 describe('Calendar', function () {

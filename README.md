@@ -5,14 +5,12 @@
 Small script to connect a Vestaboard with my home automation via MQTT.
 Can display messages, the current day or a calendar.
 
-
 ## 📦 Installation
 
-	npm install -g @sebbo2002/vestaboard2mqtt
+    npm install -g @sebbo2002/vestaboard2mqtt
 
 Configuration is expected in the file "~/.vestaboard2mqtt". An example file is in the root folder.
 Please stop the script before editing.
-
 
 ## 📑 Pages
 
@@ -36,7 +34,6 @@ beforehand. The calendar is activated with `:prefix/calendar`, specifying the li
 calendars to be viewed, comma-separated.
 
 If there are no entries for the current day, the display of Today (see above) is output.
-
 
 ## 🙆🏼‍♂️ Copyright and license
 

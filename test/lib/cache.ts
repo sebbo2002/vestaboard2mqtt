@@ -1,7 +1,8 @@
 'use strict';
 
-import Cache from '../../src/lib/cache.js';
 import * as assert from 'assert';
+
+import Cache from '../../src/lib/cache.js';
 
 describe('Cache', function () {
     describe('set() / get() / delete()', function () {
