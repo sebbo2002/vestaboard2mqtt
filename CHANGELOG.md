@@ -1,3 +1,15 @@
+# [6.0.0](https://github.com/sebbo2002/vestaboard2mqtt/compare/v5.0.1...v6.0.0) (2025-05-12)
+
+### chore
+
+- Drop node v18 support ([3e18405](https://github.com/sebbo2002/vestaboard2mqtt/commit/3e18405ac1e1be738a414623f97169c802567f99))
+
+### BREAKING CHANGES
+
+- Drop node.js v18 Support
+
+This node.js version is no longer supported. For more information see https://nodejs.dev/en/about/releases/
+
 ## [5.0.1](https://github.com/sebbo2002/vestaboard2mqtt/compare/v5.0.0...v5.0.1) (2025-01-09)
 
 ### Bug Fixes
