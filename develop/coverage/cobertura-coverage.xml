@@ -1,17 +1,42 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="784" lines-covered="529" line-rate="0.6747" branches-valid="116" branches-covered="99" branch-rate="0.8534" timestamp="1750834152930" complexity="0" version="0.1">
+<coverage lines-valid="784" lines-covered="529" line-rate="0.6747" branches-valid="149" branches-covered="123" branch-rate="0.8255" timestamp="1751380660572" complexity="0" version="0.1">
   <sources>
     <source>/home/runner/work/vestaboard2mqtt/vestaboard2mqtt</source>
   </sources>
   <packages>
-    <package name="main" line-rate="0.6747" branch-rate="0.8534">
+    <package name="main" line-rate="0.6747" branch-rate="0.8255">
       <classes>
-        <class name="cache.ts" filename="src/lib/cache.ts" line-rate="0.875" branch-rate="0.6428">
+        <class name="cache.ts" filename="src/lib/cache.ts" line-rate="0.875" branch-rate="0.6764">
           <methods>
             <method name="__name" hits="1" signature="()V">
               <lines>
                 <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="__export" hits="1" signature="()V">
+              <lines>
+                <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="__copyProps" hits="1" signature="()V">
+              <lines>
+                <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="get" hits="4" signature="()V">
+              <lines>
+                <line number="1" hits="4"/>
+              </lines>
+            </method>
+            <method name="__toCommonJS" hits="1" signature="()V">
+              <lines>
+                <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="default" hits="4" signature="()V">
+              <lines>
+                <line number="1" hits="4"/>
               </lines>
             </method>
             <method name="&lt;instance_members_initializer&gt;" hits="4" signature="()V">
@@ -66,7 +91,7 @@
             </method>
           </methods>
           <lines>
-            <line number="1" hits="1" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="1" hits="1" branch="true" condition-coverage="85.71428571428571% (6/7)"/>
             <line number="2" hits="1" branch="false"/>
             <line number="3" hits="1" branch="false"/>
             <line number="4" hits="1" branch="false"/>
@@ -196,11 +221,41 @@
             <line number="128" hits="1" branch="false"/>
           </lines>
         </class>
-        <class name="config.ts" filename="src/lib/config.ts" line-rate="0.5" branch-rate="1">
+        <class name="config.ts" filename="src/lib/config.ts" line-rate="0.5" branch-rate="0.7272">
           <methods>
             <method name="__name" hits="1" signature="()V">
               <lines>
                 <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="__export" hits="1" signature="()V">
+              <lines>
+                <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="__copyProps" hits="2" signature="()V">
+              <lines>
+                <line number="1" hits="2"/>
+              </lines>
+            </method>
+            <method name="get" hits="1" signature="()V">
+              <lines>
+                <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="__toESM" hits="1" signature="()V">
+              <lines>
+                <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="__toCommonJS" hits="1" signature="()V">
+              <lines>
+                <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="default" hits="0" signature="()V">
+              <lines>
+                <line number="1" hits="0"/>
               </lines>
             </method>
             <method name="&lt;static_initializer&gt;" hits="1" signature="()V">
@@ -245,7 +300,7 @@
             </method>
           </methods>
           <lines>
-            <line number="1" hits="1" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="1" hits="1" branch="true" condition-coverage="70% (7/10)"/>
             <line number="2" hits="1" branch="false"/>
             <line number="3" hits="1" branch="false"/>
             <line number="4" hits="1" branch="false"/>
@@ -531,11 +586,41 @@
             <line number="187" hits="0" branch="false"/>
           </lines>
         </class>
-        <class name="message.ts" filename="src/lib/message.ts" line-rate="0.9749" branch-rate="0.9277">
+        <class name="message.ts" filename="src/lib/message.ts" line-rate="0.9749" branch-rate="0.9139">
           <methods>
             <method name="__name" hits="1" signature="()V">
               <lines>
                 <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="__export" hits="1" signature="()V">
+              <lines>
+                <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="__copyProps" hits="1" signature="()V">
+              <lines>
+                <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="get" hits="26" signature="()V">
+              <lines>
+                <line number="1" hits="26"/>
+              </lines>
+            </method>
+            <method name="__toCommonJS" hits="1" signature="()V">
+              <lines>
+                <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="MessageWriteOptionsLine" hits="10" signature="()V">
+              <lines>
+                <line number="1" hits="10"/>
+              </lines>
+            </method>
+            <method name="default" hits="16" signature="()V">
+              <lines>
+                <line number="1" hits="16"/>
               </lines>
             </method>
             <method name="&lt;instance_members_initializer&gt;" hits="12" signature="()V">
@@ -610,7 +695,7 @@
             </method>
           </methods>
           <lines>
-            <line number="1" hits="1" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="1" hits="16" branch="true" condition-coverage="90% (9/10)"/>
             <line number="2" hits="1" branch="false"/>
             <line number="3" hits="1" branch="false"/>
             <line number="4" hits="1" branch="false"/>
@@ -968,14 +1053,44 @@
             <line number="356" hits="18" branch="false"/>
             <line number="357" hits="18" branch="false"/>
             <line number="358" hits="18" branch="false"/>
-            <line number="359" hits="1" branch="false"/>
+            <line number="359" hits="1" branch="true" condition-coverage="0% (0/1)"/>
           </lines>
         </class>
-        <class name="page.ts" filename="src/lib/page.ts" line-rate="1" branch-rate="1">
+        <class name="page.ts" filename="src/lib/page.ts" line-rate="1" branch-rate="0.7">
           <methods>
             <method name="__name" hits="1" signature="()V">
               <lines>
                 <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="__export" hits="1" signature="()V">
+              <lines>
+                <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="__copyProps" hits="2" signature="()V">
+              <lines>
+                <line number="1" hits="2"/>
+              </lines>
+            </method>
+            <method name="get" hits="0" signature="()V">
+              <lines>
+                <line number="1" hits="0"/>
+              </lines>
+            </method>
+            <method name="__toESM" hits="1" signature="()V">
+              <lines>
+                <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="__toCommonJS" hits="1" signature="()V">
+              <lines>
+                <line number="1" hits="1"/>
+              </lines>
+            </method>
+            <method name="default" hits="0" signature="()V">
+              <lines>
+                <line number="1" hits="0"/>
               </lines>
             </method>
             <method name="&lt;static_initializer&gt;" hits="1" signature="()V">
@@ -985,7 +1100,7 @@
             </method>
           </methods>
           <lines>
-            <line number="1" hits="1" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="1" hits="1" branch="true" condition-coverage="66.66666666666666% (6/9)"/>
             <line number="2" hits="1" branch="false"/>
             <line number="3" hits="1" branch="false"/>
             <line number="4" hits="1" branch="false"/>
