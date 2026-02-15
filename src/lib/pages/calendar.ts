@@ -71,6 +71,7 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
             const calendar = await ical.async.fromURL(url);
             const events = Object.values(calendar).filter(
                 (entry) =>
+                    entry &&
                     entry.type === 'VEVENT' &&
                     entry.start &&
                     entry.end &&
