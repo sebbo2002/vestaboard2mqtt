@@ -1,3 +1,5 @@
+## [6.0.4](https://github.com/sebbo2002/vestaboard2mqtt/compare/v6.0.3...v6.0.4) (2026-02-15)
+
 ## [6.0.3](https://github.com/sebbo2002/vestaboard2mqtt/compare/v6.0.2...v6.0.3) (2026-01-18)
 
 ## [6.0.2](https://github.com/sebbo2002/vestaboard2mqtt/compare/v6.0.1...v6.0.2) (2025-10-28)
