@@ -44,9 +44,9 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
     public static isMidnight(date: Date): boolean {
         const result = Boolean(
             !date.getHours() &&
-                !date.getMinutes() &&
-                !date.getSeconds() &&
-                !date.getMilliseconds(),
+            !date.getMinutes() &&
+            !date.getSeconds() &&
+            !date.getMilliseconds(),
         );
 
         return result;
@@ -55,8 +55,8 @@ export default class CalendarPage implements Page<CalendarPagePayload> {
     public static isSameDay(a: Date, b: Date): boolean {
         const result = Boolean(
             a.getFullYear() === b.getFullYear() &&
-                a.getMonth() === b.getMonth() &&
-                a.getDate() === b.getDate(),
+            a.getMonth() === b.getMonth() &&
+            a.getDate() === b.getDate(),
         );
 
         return result;
