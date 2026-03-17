@@ -8,9 +8,10 @@ export interface TodayPagePayload {
     temp?: [number, number];
 }
 
-export default class TodayPage
-    implements Page<Partial<TodayPagePayload>, TodayPagePayload>
-{
+export default class TodayPage implements Page<
+    Partial<TodayPagePayload>,
+    TodayPagePayload
+> {
     static readonly cache = new Cache('calendar');
 
     parseConfig(
