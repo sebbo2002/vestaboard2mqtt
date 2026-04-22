@@ -1,3 +1,13 @@
+# [7.0.0](https://github.com/sebbo2002/vestaboard2mqtt/compare/v6.0.5...v7.0.0) (2026-04-22)
+
+### Features
+
+- Update Docker Base Image ([2ff47ce](https://github.com/sebbo2002/vestaboard2mqtt/commit/2ff47ce0a7c9ec5e27a8af618d73c907ccf413a1))
+
+### BREAKING CHANGES
+
+- Containers for linux/arm/v7 and linux/arm/v6 are no longer built automatically, as they are no longer available for node:lts-alpine. Please build these containers yourself if you need to. New supported platforms: linux/amd64 and linux/arm64/v8
+
 ## [6.0.5](https://github.com/sebbo2002/vestaboard2mqtt/compare/v6.0.4...v6.0.5) (2026-03-17)
 
 ## [6.0.4](https://github.com/sebbo2002/vestaboard2mqtt/compare/v6.0.3...v6.0.4) (2026-02-15)
