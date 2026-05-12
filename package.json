@@ -8,7 +8,7 @@
     },
     "dependencies": {
         "async-mqtt": "^2.6.3",
-        "node-ical": "^0.26.0",
+        "node-ical": "^0.26.1",
         "vestaboard-api": "^1.1.5"
     },
     "description": "Small script to connect a Vestaboard with my home automation via MQTT.",
@@ -25,12 +25,12 @@
         "@types/node-fetch": "^3.0.3",
         "@types/ws": "^8.18.1",
         "c8": "^11.0.0",
-        "eslint": "^10.2.0",
+        "eslint": "^10.3.0",
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-jsonc": "^3.1.2",
-        "eslint-plugin-perfectionist": "^5.8.0",
+        "eslint-plugin-perfectionist": "^5.9.0",
         "esm": "^3.2.25",
-        "globals": "^17.5.0",
+        "globals": "^17.6.0",
         "husky": "^9.1.7",
         "license-checker": "^25.0.1",
         "mocha": "^11.7.5",
@@ -42,8 +42,8 @@
         "tsdown": "^0.21.9",
         "tsx": "^4.21.0",
         "typedoc": "^0.28.19",
-        "typescript": "^6.0.2",
-        "typescript-eslint": "^8.58.2"
+        "typescript": "^6.0.3",
+        "typescript-eslint": "^8.59.1"
     },
     "engines": {
         "node": "20 || >=22.0.0"
