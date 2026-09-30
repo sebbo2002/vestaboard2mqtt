@@ -1,3 +1,5 @@
+## [8.0.2](https://github.com/sebbo2002/vestaboard2mqtt/compare/v8.0.1...v8.0.2) (2026-09-30)
+
 ## [8.0.1](https://github.com/sebbo2002/vestaboard2mqtt/compare/v8.0.0...v8.0.1) (2026-07-24)
 
 # [8.0.0](https://github.com/sebbo2002/vestaboard2mqtt/compare/v7.0.0...v8.0.0) (2026-06-02)
