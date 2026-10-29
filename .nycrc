@@ -1,6 +1,5 @@
 {
     "cache": false,
-    "check-coverage": true,
     "extension": [".ts"],
     "include": ["src/lib/*.ts"],
     "exclude": ["coverage/**", "node_modules/**"],
