@@ -1,3 +1,9 @@
+## [8.0.3](https://github.com/sebbo2002/vestaboard2mqtt/compare/v8.0.2...v8.0.3) (2026-10-29)
+
+### Bug Fixes
+
+- sync package-lock.json with package.json ([337c739](https://github.com/sebbo2002/vestaboard2mqtt/commit/337c739f4d9e1dbefcf52c3680cf50d5bfa67af4))
+
 ## [8.0.2](https://github.com/sebbo2002/vestaboard2mqtt/compare/v8.0.1...v8.0.2) (2026-09-30)
 
 ## [8.0.1](https://github.com/sebbo2002/vestaboard2mqtt/compare/v8.0.0...v8.0.1) (2026-07-24)
