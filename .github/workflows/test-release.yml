@@ -70,6 +70,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PUSH_TO_DOCKERHUB: ${{ (github.repository != 'sebbo2002/js-template') && (secrets.DOCKERHUB_TOKEN != null) }}
+      # Dependabot PRs get a read-only GITHUB_TOKEN that cannot write packages,
+      # so we skip the push (but still build + smoke-test the image locally).
       PUSH_IMAGE: ${{ github.actor != 'dependabot[bot]' }}
       BUILD_OUTPUTS: ${{ github.actor == 'dependabot[bot]' && 'type=docker' || '' }}
       BUILD_PLATFORMS: ${{ github.actor != 'dependabot[bot]' && 'linux/amd64,linux/arm64/v8' || 'linux/amd64' }}
